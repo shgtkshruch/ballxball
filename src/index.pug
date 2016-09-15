@@ -14,14 +14,18 @@ html(lang="ja")
     // endbower
     // endbuild
     // build:css styles/main.css
-    link(rel='stylesheet', href='styles/main.css', media='all')
+    link(rel='stylesheet', href='style.css', media='all')
     // endbuild
   body
-    h1 Hello Github Pages
+    header.header
+      svg#svg
+
     // build:js scripts/vendor.js
     // bower:js
+    script(src='../bower_components/animejs/anime.js')
+    script(src='../bower_components/Snap.svg/dist/snap.svg-min.js')
     // endbower
     // endbuild
     // build:js scripts/main.js
-    script(src='scripts/main.js')
+    script(src='scripts/opening.js')
     // endbuild
