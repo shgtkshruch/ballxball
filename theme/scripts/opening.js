@@ -45,10 +45,11 @@
 
   function scale() {
     var duration = 350;
+    var delay = 450;
 
     anime({
       targets: '#siteName',
-      delay: 450,
+      delay: delay,
       scale: {
         value: 2.5,
         duration: duration
@@ -57,11 +58,22 @@
         value: [1, 0],
         duration: duration
       },
+      height: {
+        value: 0,
+        duration: duration,
+        delay: delay + duration
+      },
       easing: 'linear',
       complete: function complete() {
-        var svg = document.getElementById('siteName');
-        svg.style.display = 'none';
+        slideUp();
       }
+    });
+  }
+
+  function slideUp() {
+    var articles = document.querySelectorAll('.article');
+    articles.forEach(function (article) {
+      article.classList.add('article--slideUp');
     });
   }
 })();

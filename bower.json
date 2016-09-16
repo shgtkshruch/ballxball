@@ -2,6 +2,7 @@
   "name": "ballxball",
   "dependencies": {
     "animejs": "^1.1.1",
-    "Snap.svg": "snap.svg#^0.4.1"
+    "Snap.svg": "snap.svg#^0.4.1",
+    "sanitize-css": "^4.1.0"
   }
 }

@@ -51,23 +51,33 @@
 
   function scale() {
     const duration = 350;
+    const delay = 450;
 
     anime({
       targets: '#siteName',
-      delay: 450,
+      delay,
       scale: {
         value: 2.5,
-        duration: duration
+        duration
       },
       opacity: {
         value: [1, 0],
-        duration: duration
+        duration
+      },
+      height: {
+        value: 0,
+        duration: duration,
+        delay: delay + duration
       },
       easing: 'linear',
-      complete() {
-        const svg = document.getElementById('siteName');
-        svg.style.display = 'none';
-      }
+      complete() { slideUp(); }
+    });
+  }
+
+  function slideUp() {
+    const articles = document.querySelectorAll('.article');
+    articles.forEach(article => {
+      article.classList.add('article--slideUp');
     });
   }
 

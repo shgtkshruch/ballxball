@@ -11,15 +11,35 @@ html(lang="ja")
     meta(name='format-detection', content='telephone=no')
     // build:css styles/vendor.css
     // bower:css
+    link(rel='stylesheet', href='../bower_components/sanitize-css/sanitize.css')
     // endbower
     // endbuild
     // build:css styles/main.css
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway:100', media='all')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway', media='all')
     link(rel='stylesheet', href='style.css', media='all')
     // endbuild
   body
     header.header
+      h1.header__title ballxball
       svg#siteName.siteName
+
+    main.l-main
+      - var i = 0;
+      while i < 10
+        article.article
+          header.article__header
+            time.article__date Sep 15, 2016
+            h2.article__title
+              a(href="#") WordPressの開発環境をDockerで一瞬で立ち上げる
+          ul.article__tags
+            li.article__tag
+              a.article__tagLink(href="#") WordPress
+            li.article__tag
+              a.article__tagLink(href="#") Docker
+
+          div.article__body
+            p Sit in ipsum rerum corporis facilis voluptates repudiandae Nisi ab unde nemo minima repudiandae assumenda? Magni magni incidunt temporibus quaerat doloribus, neque Odit voluptatum deserunt reiciendis eaque labore Magni nesciunt.
+        - i++
 
     // build:js scripts/vendor.js
     // bower:js

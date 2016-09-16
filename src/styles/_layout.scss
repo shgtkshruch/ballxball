@@ -1,0 +1,9 @@
+.l {
+  &-main {
+    padding: 1rem;
+    @media (min-width: $screen-md) {
+      width: 1.6rem * 40;
+      margin: 0 auto;
+    }
+  }
+}
