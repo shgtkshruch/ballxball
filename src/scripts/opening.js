@@ -9,7 +9,7 @@
   const colorPink = '#ff1a84';
   const colorBlue = '#0f2c70';
 
-  const s = Snap("#svg").attr({width: svgWidth, height: svgHeight});
+  const s = Snap("#siteName").attr({width: svgWidth, height: svgHeight});
   const circle1 = s
     .circle(svgWidth / 2, circleR * -1, circleR)
     .attr({fill: colorPink});
@@ -21,7 +21,7 @@
   const siteName = s
     .text(0, 0, ['ball', 'x', 'ball'])
     .attr({
-      'font-size': circleR / 2,
+      'font-size': circleR / 1.5,
       fill: '#fff',
       opacity: 0
     });
@@ -44,7 +44,7 @@
     siteName
       .attr({
         x: svgWidth / 2 - textWidth / 2,
-        y: svgHeight / 2 + textHeight / 2 - 10,
+        y: svgHeight / 2 + textHeight / 2 - 20,
       })
       .animate({opacity: 1}, 1000, mina.easeout, scale);
   }
@@ -53,7 +53,7 @@
     const duration = 350;
 
     anime({
-      targets: '#svg',
+      targets: '#siteName',
       delay: 450,
       scale: {
         value: 2.5,
@@ -65,7 +65,7 @@
       },
       easing: 'linear',
       complete() {
-        const svg = document.getElementById('svg');
+        const svg = document.getElementById('siteName');
         svg.style.display = 'none';
       }
     });

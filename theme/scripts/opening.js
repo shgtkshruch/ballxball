@@ -11,13 +11,13 @@
   var colorPink = '#ff1a84';
   var colorBlue = '#0f2c70';
 
-  var s = Snap("#svg").attr({ width: svgWidth, height: svgHeight });
+  var s = Snap("#siteName").attr({ width: svgWidth, height: svgHeight });
   var circle1 = s.circle(svgWidth / 2, circleR * -1, circleR).attr({ fill: colorPink });
 
   var circle2 = s.circle(svgWidth / 2, circleR * -1, circleR).attr({ fill: colorBlue });
 
   var siteName = s.text(0, 0, ['ball', 'x', 'ball']).attr({
-    'font-size': circleR / 2,
+    'font-size': circleR / 1.5,
     fill: '#fff',
     opacity: 0
   });
@@ -39,7 +39,7 @@
 
     siteName.attr({
       x: svgWidth / 2 - textWidth / 2,
-      y: svgHeight / 2 + textHeight / 2 - 10
+      y: svgHeight / 2 + textHeight / 2 - 20
     }).animate({ opacity: 1 }, 1000, mina.easeout, scale);
   }
 
@@ -47,7 +47,7 @@
     var duration = 350;
 
     anime({
-      targets: '#svg',
+      targets: '#siteName',
       delay: 450,
       scale: {
         value: 2.5,
@@ -59,7 +59,7 @@
       },
       easing: 'linear',
       complete: function complete() {
-        var svg = document.getElementById('svg');
+        var svg = document.getElementById('siteName');
         svg.style.display = 'none';
       }
     });
