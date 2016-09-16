@@ -5,7 +5,7 @@
 
   var circleR = 40;
   var ds = 0.05;
-  var svgWidth = 620;
+  var svgWidth = circleR * 4 * (1 + ds);
   var svgHeight = circleR * 2 * (1 + ds);
   var colorPink = '#ff1a84';
   var colorBlue = '#0f2c70';

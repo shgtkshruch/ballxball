@@ -3,7 +3,7 @@
 
   const circleR = 40;
   const ds = 0.05;
-  const svgWidth = 620;
+  const svgWidth = circleR * 4 * (1 + ds);
   const svgHeight = circleR * 2 * (1 + ds);
   const colorPink = '#ff1a84';
   const colorBlue = '#0f2c70';

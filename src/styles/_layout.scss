@@ -1,7 +1,7 @@
 .l {
   &-main {
     padding: 1rem;
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-sm) {
       width: $font-size * 50;
       margin: 0 auto;
     }

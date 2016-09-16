@@ -65,8 +65,8 @@ ul {
 }
 
 .article {
-  margin: 0 0 7rem;
-  padding-bottom: 7rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
   -webkit-transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
   transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
   -webkit-transition-duration: 500ms;
@@ -82,7 +82,7 @@ ul {
 }
 
 .article:first-child {
-  padding-top: 7rem;
+  padding-top: 3rem;
   border-top: 5px solid;
 }
 
@@ -152,7 +152,6 @@ ul {
 }
 
 .article__date {
-  display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
@@ -223,9 +222,18 @@ ul {
   color: #ff1a84;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 780px) {
   .l-main {
     width: 80rem;
     margin: 0 auto;
+  }
+
+  .article {
+    margin-bottom: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .article:first-child {
+    padding-top: 7rem;
   }
 }

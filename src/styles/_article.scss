@@ -1,11 +1,11 @@
 .article {
-  $margin: 7rem;
+  $margin: 3rem;
   $border-width: 5px;
   &:first-child {
     padding-top: $margin;
     border-top: $border-width solid;
   }
-  margin: 0 0 $margin;
+  margin-bottom: $margin;
   padding-bottom: $margin;
   border-bottom: $border-width solid;
   font-size: $font-size;
@@ -18,6 +18,15 @@
       transition-delay: 150ms * ($i - 1);
     }
   }
+  @media (min-width: $screen-sm) {
+    $margin: 7rem;
+    $border-width: 5px;
+    &:first-child {
+      padding-top: $margin;
+    }
+    margin-bottom: $margin;
+    padding-bottom: $margin;
+  }
   &--slideUp  {
     transform: translateY(0);
   }
@@ -27,7 +36,6 @@
     margin-bottom: 2rem;
   }
   &__date {
-    display: inline-block;
     font-family: 'Raleway', sans-serif;
     font-size: 1.6rem;
     font-weight: normal;
