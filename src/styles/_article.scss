@@ -9,8 +9,9 @@
   padding-bottom: $margin;
   border-bottom: $border-width solid;
   font-size: $font-size;
+  opacity: 0;
   transform: translateY(100vh);
-  transition-property: transform;
+  transition-property: transform opacity;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(.55,0,.1,1);
   @for $i from 1 through 10 {
@@ -28,6 +29,7 @@
     padding-bottom: $margin;
   }
   &--slideUp  {
+    opacity: 1;
     transform: translateY(0);
   }
   &__header {
