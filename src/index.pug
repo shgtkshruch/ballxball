@@ -22,6 +22,16 @@ html(lang="ja")
     header.header
       h1.header__title ballxball
       svg#siteName.siteName
+      svg#logo.logo
+      nav#gnav.gnav
+        ul.gnav__container
+          li.gnav__item
+            a.gnav__link(href="#") HOME
+          li.gnav__item
+            a.gnav__link(href="#") ABOUT
+          li.gnav__item
+            a.gnav__link(href="#") CATEGORY
+
 
     main.l-main
       - var i = 0;
@@ -46,7 +56,6 @@ html(lang="ja")
     script(src='../bower_components/animejs/anime.js')
     script(src='../bower_components/Snap.svg/dist/snap.svg-min.js')
     // endbower
-    // endbuild
-    // build:js scripts/main.js
     script(src='scripts/opening.js')
+    script(src='scripts/logo.js')
     // endbuild

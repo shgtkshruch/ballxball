@@ -1,0 +1,10 @@
+.gnav {
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    margin: 0 1rem;
+    font-size: 1.4rem;
+  }
+}

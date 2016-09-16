@@ -2,12 +2,11 @@
   $margin: 7rem;
   &:first-child {
     padding-top: $margin;
-    border-top: 1px solid $color-blue;
+    border-top: 1px solid;
   }
   margin: 0 0 $margin;
   padding-bottom: $margin;
-  border-bottom: 1px solid $color-blue;
-  color: #000;
+  border-bottom: 1px solid;
   font-size: 1.6rem;
   transform: translateY(100vh);
   transition-property: transform;

@@ -66,7 +66,7 @@
       },
       height: {
         value: 0,
-        duration: duration,
+        duration: 200,
         delay: delay + duration
       },
       easing: 'linear',
@@ -79,6 +79,9 @@
     articles.forEach(article => {
       article.classList.add('article--slideUp');
     });
+
+    const svg = document.getElementById('siteName');
+    svg.style.display = 'none';
   }
 
 })();

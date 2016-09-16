@@ -60,7 +60,7 @@
       },
       height: {
         value: 0,
-        duration: duration,
+        duration: 200,
         delay: delay + duration
       },
       easing: 'linear',
@@ -75,5 +75,8 @@
     articles.forEach(function (article) {
       article.classList.add('article--slideUp');
     });
+
+    var svg = document.getElementById('siteName');
+    svg.style.display = 'none';
   }
 })();
