@@ -1,13 +1,14 @@
 .article {
   $margin: 7rem;
+  $border-width: 5px;
   &:first-child {
     padding-top: $margin;
-    border-top: 1px solid;
+    border-top: $border-width solid;
   }
   margin: 0 0 $margin;
   padding-bottom: $margin;
-  border-bottom: 1px solid;
-  font-size: 1.6rem;
+  border-bottom: $border-width solid;
+  font-size: $font-size;
   transform: translateY(100vh);
   transition-property: transform;
   transition-duration: 500ms;
@@ -20,21 +21,23 @@
   &--slideUp  {
     transform: translateY(0);
   }
-  &__title {
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
   }
   &__date {
     display: inline-block;
-    margin-bottom: 1rem;
     font-family: 'Raleway', sans-serif;
     font-size: 1.6rem;
     font-weight: normal;
   }
   &__tags {
-    margin-bottom: 1rem;
+    margin-left: 2rem;
     font-size: 0;
   }
   &__tag {
-    $height: 30px;
+    $height: 24px;
     position: relative;
     display: inline-block;
     height: $height;
@@ -43,7 +46,7 @@
     background-color: $color-gray;
     color: #000;
     &:not(:first-child) {
-      margin-left: 3rem;
+      margin-left: 2rem;
     }
     &::before {
       $size: 7px;
@@ -78,5 +81,12 @@
   &__tagLink {
     display: block;
     padding-left: 2.5rem;
+  }
+  &__title {
+    margin: 2rem 0;
+    font-size: 2.7rem;
+    &:hover {
+      color: $color-pink;
+    }
   }
 }

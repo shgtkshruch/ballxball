@@ -9,6 +9,8 @@
   var svgHeight = circleR * 2 * (1 + ds);
   var colorPink = '#ff1a84';
   var colorBlue = '#0f2c70';
+  var duration = 2000;
+  var easing = 'easeInQuad';
 
   var s = Snap('#logo').attr({ width: svgWidth, height: svgHeight });
 
@@ -30,11 +32,6 @@
     x: svgWidth / 2 - textWidth / 2,
     y: svgHeight / 2 + textHeight / 2 - 5
   });
-
-  var duration = 2000;
-  var easing = 'easeInQuad';
-
-  console.log(anime.easings);
 
   function pinkAnime1() {
     anime({
