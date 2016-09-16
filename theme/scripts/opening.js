@@ -11,12 +11,13 @@
   var colorPink = '#ff1a84';
   var colorBlue = '#0f2c70';
 
-  var s = Snap("#siteName").attr({ width: svgWidth, height: svgHeight });
-  var circle1 = s.circle(svgWidth / 2, circleR * -1, circleR).attr({ fill: colorPink });
+  var s = Snap("#logo").attr({ width: svgWidth, height: svgHeight });
+  var circle1 = s.circle(svgWidth / 2, circleR * -1, circleR).attr({ fill: colorPink, id: 'circlePink' });
 
-  var circle2 = s.circle(svgWidth / 2, circleR * -1, circleR).attr({ fill: colorBlue });
+  var circle2 = s.circle(svgWidth / 2, circleR * -1, circleR).attr({ fill: colorBlue, id: 'circleBlue' });
 
   var siteName = s.text(0, 0, ['ball', 'x', 'ball']).attr({
+    id: 'logoText',
     'font-size': circleR / 1.5,
     fill: '#fff',
     opacity: 0
@@ -44,26 +45,54 @@
   }
 
   function scale() {
-    var duration = 350;
-    var delay = 450;
+    var circleR = 40;
+    var ds = 0.05;
+    var svgWidth = circleR * 4 * (1 + ds);
+    var svgHeight = circleR * 2 * (1 + ds);
+    var textWidth = 104;
+    var textHeight = 31;
+    var duration = 500;
+    var easing = 'linear';
 
     anime({
-      targets: '#siteName',
-      delay: delay,
-      scale: {
-        value: 2.5,
-        duration: duration
-      },
-      opacity: {
-        value: [1, 0],
-        duration: duration
+      targets: '#logo',
+      width: {
+        value: svgWidth,
+        duration: duration,
+        easing: 'linear'
       },
       height: {
-        value: 0,
-        duration: 200,
-        delay: delay + duration
-      },
-      easing: 'linear',
+        value: svgHeight,
+        duration: duration,
+        easing: easing
+      }
+    });
+
+    anime({
+      targets: '#circlePink ',
+      cx: svgWidth / 2 - circleR,
+      cy: svgHeight / 2,
+      r: circleR,
+      duration: duration,
+      easing: easing
+    });
+
+    anime({
+      targets: '#circleBlue ',
+      cx: svgWidth / 2 + circleR,
+      cy: svgHeight / 2,
+      r: circleR,
+      duration: duration,
+      easing: easing
+    });
+
+    anime({
+      targets: '#logoText ',
+      x: svgWidth / 2 - textWidth / 2,
+      y: svgHeight / 2 + textHeight / 2 - 5,
+      'font-size': circleR / 1.5,
+      duration: duration,
+      easing: easing,
       complete: function complete() {
         slideUp();
       }
@@ -76,7 +105,71 @@
       article.classList.add('article--slideUp');
     });
 
-    var svg = document.getElementById('siteName');
-    svg.style.display = 'none';
+    animation();
+  }
+
+  function animation() {
+    var ds = 0.05;
+    var duration = 2000;
+    var easing = 'easeInQuad';
+
+    function pinkAnime1() {
+      anime({
+        targets: '#circlePink',
+        scale: {
+          value: 1 + ds,
+          duration: duration,
+          easing: easing
+        },
+        complete: function complete() {
+          pinkAnime2();
+        }
+      });
+    }
+
+    function pinkAnime2() {
+      anime({
+        targets: '#circlePink',
+        scale: {
+          value: 1 - ds,
+          duration: duration,
+          easing: easing
+        },
+        complete: function complete() {
+          pinkAnime1();
+        }
+      });
+    }
+
+    function blueAnime1() {
+      anime({
+        targets: '#circleBlue',
+        scale: {
+          value: 1 - ds,
+          duration: duration,
+          easing: easing
+        },
+        complete: function complete() {
+          blueAnime2();
+        }
+      });
+    }
+
+    function blueAnime2() {
+      anime({
+        targets: '#circleBlue',
+        scale: {
+          value: 1 + ds,
+          duration: duration,
+          easing: easing
+        },
+        complete: function complete() {
+          blueAnime1();
+        }
+      });
+    }
+
+    pinkAnime1();
+    blueAnime1();
   }
 })();
