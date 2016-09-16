@@ -30,7 +30,8 @@ html(lang="ja")
             a.gnav__link(href="#") ABOUT
           li.gnav__item
             a.gnav__link(href="#") CATEGORY
-
+      .search
+        <gcse:searchbox-only></gcse:searchbox-only>
 
     main.l-main
       - var i = 0;
@@ -56,4 +57,5 @@ html(lang="ja")
     script(src='../bower_components/Snap.svg/dist/snap.svg-min.js')
     // endbower
     script(src='scripts/opening.js')
+    script(src='scripts/google-custom-search.js')
     // endbuild

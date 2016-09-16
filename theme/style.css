@@ -37,6 +37,16 @@ ul {
   display: none;
 }
 
+.logo {
+  margin: 3rem 0 5rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.logo circle {
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+}
+
 .gnav__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,14 +61,15 @@ ul {
   font-size: 1.4rem;
 }
 
-.logo {
-  margin: 3rem 0 5rem;
-  font-family: 'Raleway', sans-serif;
+.search {
+  display: inline-block;
+  width: 30rem;
+  margin: 2rem 0 1rem;
 }
 
-.logo circle {
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
+input.gsc-search-button-v2 {
+  width: auto !important;
+  height: auto !important;
 }
 
 .article {
