@@ -3,6 +3,7 @@
     padding: 1rem;
     @media (min-width: $screen-sm) {
       width: $font-size * 50;
+      padding: 0;
       margin: 0 auto;
     }
   }

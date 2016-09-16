@@ -236,6 +236,7 @@ input.gsc-search-button-v2 {
   .l-main {
     width: 80rem;
     margin: 0 auto;
+    padding: 0;
   }
 
   .article {
