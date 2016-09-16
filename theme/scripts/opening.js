@@ -40,7 +40,7 @@
 
     siteName.attr({
       x: svgWidth / 2 - textWidth / 2,
-      y: svgHeight / 2 + textHeight / 2 - 20
+      y: svgHeight / 2 + textHeight / 2 - 30
     }).animate({ opacity: 1 }, 1000, mina.easeout, scale);
   }
 
@@ -104,6 +104,11 @@
     articles.forEach(function (article) {
       article.classList.add('article--slideUp');
     });
+    var header = document.querySelector('.header');
+    header.classList.add('header--animationEnd');
+
+    var headerBottom = document.querySelector('.header__bottom');
+    headerBottom.classList.add('header__bottom--slideUp');
 
     animation();
   }

@@ -24,18 +24,16 @@ html(lang="ja")
       h1.header__title ballxball
       a(href="/")
         svg#logo.logo
-      nav#gnav.gnav
-        ul.gnav__container
-          li.gnav__item
-            a.gnav__link(href="#") HOME
-          li.gnav__item
-            a.gnav__link(href="#") ABOUT
-          li.gnav__item
-            a.gnav__link(href="#") CATEGORY
-      .search
-        i.search__icon.fa.fa-search
-        .search__box
-          <gcse:searchbox-only></gcse:searchbox-only>
+      .header__bottom
+        nav#gnav.gnav
+          ul.gnav__container
+            each item in ['ABOUT', 'CATEGORY', 'ARCHIVE']
+              li.gnav__item
+                a.gnav__link(href="#")= item
+        .search
+          i.search__icon.fa.fa-search
+          .search__box
+            <gcse:searchbox-only></gcse:searchbox-only>
 
     main.l-main
       - var i = 0;
@@ -48,7 +46,6 @@ html(lang="ja")
                 a.article__tagLink(href="#") WordPress
               li.article__tag
                 a.article__tagLink(href="#") Docker
-
           h2.article__title
             a(href="#") WordPressの開発環境をDockerを使って一瞬で立ち上げる
           div.article__body

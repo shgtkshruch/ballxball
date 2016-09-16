@@ -16,7 +16,7 @@
   transition-timing-function: cubic-bezier(.55,0,.1,1);
   @for $i from 1 through 10 {
     &:nth-child(#{$i}) {
-      transition-delay: 150ms * ($i - 1);
+      transition-delay: 150ms * $i;
     }
   }
   @media (min-width: $screen-sm) {

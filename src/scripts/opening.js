@@ -45,7 +45,7 @@
     siteName
       .attr({
         x: svgWidth / 2 - textWidth / 2,
-        y: svgHeight / 2 + textHeight / 2 - 20,
+        y: svgHeight / 2 + textHeight / 2 - 30
       })
       .animate({opacity: 1}, 1000, mina.easeout, scale);
   }
@@ -108,6 +108,11 @@
     articles.forEach(article => {
       article.classList.add('article--slideUp');
     });
+    const header = document.querySelector('.header');
+    header.classList.add('header--animationEnd');
+
+    const headerBottom = document.querySelector('.header__bottom');
+    headerBottom.classList.add('header__bottom--slideUp');
 
     animation();
   }

@@ -1,6 +1,23 @@
 .header {
   text-align: center;
+  @media (min-width: $screen-sm) {
+    &--animationEnd {
+      width: $font-size * 50;
+      margin: 0 auto;
+    }
+  }
   &__title {
     display: none;
+  }
+  &__bottom {
+    transform: translateY(100vh);
+    opacity: 0;
+    transition-property: transform opacity;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(.55,0,.1,1);
+    &--slideUp {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
