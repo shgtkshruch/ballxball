@@ -2,6 +2,26 @@
   display: inline-block;
   width: 30rem;
   margin: 2rem 0 1rem;
+  &__box {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;;
+    &--show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__icon {
+    padding: 1.3rem;
+    font-size: 2rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    &--hide {
+      display: none;
+    }
+  }
 }
 
 input.gsc-search-button-v2 {

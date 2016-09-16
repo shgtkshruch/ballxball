@@ -16,6 +16,7 @@ html(lang="ja")
     // endbuild
     // build:css styles/main.css
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway', media='all')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', media='all')
     link(rel='stylesheet', href='style.css', media='all')
     // endbuild
   body
@@ -31,7 +32,9 @@ html(lang="ja")
           li.gnav__item
             a.gnav__link(href="#") CATEGORY
       .search
-        <gcse:searchbox-only></gcse:searchbox-only>
+        i.search__icon.fa.fa-search
+        .search__box
+          <gcse:searchbox-only></gcse:searchbox-only>
 
     main.l-main
       - var i = 0;
@@ -57,5 +60,6 @@ html(lang="ja")
     script(src='../bower_components/Snap.svg/dist/snap.svg-min.js')
     // endbower
     script(src='scripts/opening.js')
+    script(src='scripts/search.js')
     script(src='scripts/google-custom-search.js')
     // endbuild

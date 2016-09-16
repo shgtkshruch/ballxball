@@ -67,6 +67,31 @@ ul {
   margin: 2rem 0 1rem;
 }
 
+.search__box {
+  visibility: hidden;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  opacity: 0;
+}
+
+.search__box--show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search__icon {
+  padding: 1.3rem;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #000;
+  font-size: 2rem;
+}
+
+.search__icon--hide {
+  display: none;
+}
+
 input.gsc-search-button-v2 {
   width: auto !important;
   height: auto !important;
