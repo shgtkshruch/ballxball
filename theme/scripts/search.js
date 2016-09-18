@@ -3,11 +3,13 @@
 (function () {
   'use strict';
 
-  var searchIcon = document.querySelector('.search__icon');
-  var searchBox = document.querySelector('.search__box');
+  var $searchIcon = $('.search__icon');
+  var $searchBox = $('.search__box');
+  var duration = 200;
 
-  searchIcon.addEventListener('click', function () {
-    searchBox.classList.add('search__box--show');
-    this.classList.add('search__icon--hide');
-  }, false);
+  $searchIcon.click(function () {
+    $(this).fadeOut(duration, function () {
+      $searchBox.fadeIn(duration * 2);
+    });
+  });
 })();

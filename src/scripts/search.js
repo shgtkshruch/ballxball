@@ -1,11 +1,13 @@
 (() => {
   'use strict';
 
-  const searchIcon = document.querySelector('.search__icon');
-  const searchBox = document.querySelector('.search__box');
+  const $searchIcon = $('.search__icon');
+  const $searchBox = $('.search__box');
+  const duration = 200;
 
-  searchIcon.addEventListener('click', function () {
-    searchBox.classList.add('search__box--show');
-    this.classList.add('search__icon--hide');
-  }, false);
+  $searchIcon.click(function() {
+    $(this).fadeOut(duration, () => {
+      $searchBox.fadeIn(duration * 2);
+    });
+  });
 })();

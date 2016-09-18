@@ -1,26 +1,17 @@
 .search {
   display: inline-block;
-  width: 30rem;
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 2rem;
+  height: 40px;
   &__box {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s;;
-    &--show {
-      opacity: 1;
-      visibility: visible;
-    }
+    display: none;
   }
   &__icon {
     padding: 1.3rem;
-    font-size: 2rem;
     background-color: #000;
     color: #fff;
+    font-size: 2rem;
     border-radius: 50%;
     cursor: pointer;
-    &--hide {
-      display: none;
-    }
   }
 }
 
