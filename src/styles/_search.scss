@@ -1,6 +1,6 @@
 .search {
   display: inline-block;
-  margin: 2rem 0 2rem;
+  margin-bottom: 2rem;
   height: 40px;
   &__box {
     display: none;
@@ -10,7 +10,7 @@
     width: $size;
     height: $size;
     line-height: $size;
-    background-color: #000;
+    background-color: $color-blue;
     color: #fff;
     font-size: 2rem;
     border-radius: 50%;

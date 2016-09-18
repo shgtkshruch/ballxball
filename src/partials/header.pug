@@ -3,12 +3,13 @@ header.header
     a.logo__link(href="/")
       svg#logo.logo__svg
   .header__bottom
+    .search
+      i.search__icon.fa.fa-search
+      .search__box
+        <gcse:searchbox-only></gcse:searchbox-only>
+
     nav#gnav.gnav
       ul.gnav__container
         each item in ['ABOUT', 'CATEGORY', 'ARCHIVE']
           li.gnav__item
             a.gnav__link(href="#")= item
-    .search
-      i.search__icon.fa.fa-search
-      .search__box
-        <gcse:searchbox-only></gcse:searchbox-only>
