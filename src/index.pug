@@ -1,39 +1,8 @@
-doctype html
-html(lang="ja")
-  head
-    meta(charset='UTF-8')
-    title ballxball
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='author', centnt='author')
-    meta(name='description', content='description')
-    meta(name='keywords', content='keywords')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='format-detection', content='telephone=no')
-    // build:css styles/vendor.css
-    // bower:css
-    link(rel='stylesheet', href='../bower_components/sanitize-css/sanitize.css')
-    // endbower
-    // endbuild
-    // build:css styles/main.css
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway', media='all')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', media='all')
-    link(rel='stylesheet', href='style.css', media='all')
-    // endbuild
+extends partials/layout
+
+block body
   body.opening
-    header.header
-      h1.header__title ballxball
-      a.logo(href="/")
-        svg#logo.logo__svg
-      .header__bottom
-        nav#gnav.gnav
-          ul.gnav__container
-            each item in ['ABOUT', 'CATEGORY', 'ARCHIVE']
-              li.gnav__item
-                a.gnav__link(href="#")= item
-        .search
-          i.search__icon.fa.fa-search
-          .search__box
-            <gcse:searchbox-only></gcse:searchbox-only>
+    include partials/header
 
     main.l-main
       - var i = 0;
@@ -47,18 +16,9 @@ html(lang="ja")
               li.article__tag
                 a.article__tagLink(href="#") Docker
           h2.article__title
-            a(href="#") WordPressの開発環境をDockerを使って一瞬で立ち上げる
+            a(href="page.html") WordPressの開発環境をDockerを使って一瞬で立ち上げる
           div.article__body
             p Sit in ipsum rerum corporis facilis voluptates repudiandae Nisi ab unde nemo minima repudiandae assumenda? Magni magni incidunt temporibus quaerat doloribus, neque Odit voluptatum deserunt reiciendis eaque labore Magni nesciunt.
         - i++
 
-    // build:js scripts/vendor.js
-    // bower:js
-    script(src='../bower_components/animejs/anime.js')
-    script(src='../bower_components/Snap.svg/dist/snap.svg-min.js')
-    script(src='../bower_components/jquery/dist/jquery.js')
-    // endbower
-    script(src='scripts/opening.js')
-    script(src='scripts/search.js')
-    script(src='scripts/google-custom-search.js')
-    // endbuild
+  include partials/footer
