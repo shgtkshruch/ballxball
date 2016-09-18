@@ -40,6 +40,11 @@
   var duration = 1500;
 
   var s = Snap("#logo").attr({ width: svgWidth, height: svgHeight });
+
+  var title = Snap.parse('<title>ballxball</title');
+  s.append(title);
+  s.select('desc').remove();
+
   var circle1 = s.circle(svgWidth / 2, circleR * -1, circleR).attr({ fill: colorPink, id: 'circlePink' });
 
   var circle2 = s.circle(svgWidth / 2, circleR * -1, circleR).attr({ fill: colorBlue, id: 'circleBlue' });

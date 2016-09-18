@@ -34,10 +34,6 @@ ul {
   text-align: center;
 }
 
-.header__title {
-  display: none;
-}
-
 .header__bottom--slideUp {
   -webkit-transform: translateY(0) !important;
   transform: translateY(0) !important;
@@ -61,12 +57,16 @@ ul {
 .logo {
   display: inline-block;
   margin: 3rem 0 5rem;
-  pointer-events: none;
   font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
-body:not(.opening) .logo,
-.header--animationEnd .logo {
+.logo__link {
+  pointer-events: none;
+}
+
+body:not(.opening) .logo__link,
+.header--animationEnd .logo__link {
   pointer-events: initial;
 }
 

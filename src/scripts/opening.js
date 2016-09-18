@@ -44,6 +44,11 @@
   const duration = 1500;
 
   const s = Snap("#logo").attr({width: svgWidth, height: svgHeight});
+
+  const title = Snap.parse('<title>ballxball</title');
+  s.append(title);
+  s.select('desc').remove();
+
   const circle1 = s
     .circle(svgWidth / 2, circleR * -1, circleR)
     .attr({fill: colorPink, id: 'circlePink'});
