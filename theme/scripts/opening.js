@@ -69,7 +69,7 @@
     siteName.attr({
       x: svgWidth / 2 - textWidth / 2,
       y: svgHeight / 2 + textHeight / 2 - 30
-    }).animate({ opacity: 1 }, 1000, mina.easeout, scale);
+    }).animate({ opacity: 1 }, 1000, mina.easein, scale);
   }
 
   function scale() {
