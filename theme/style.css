@@ -58,7 +58,7 @@ ul {
 }
 
 .logo {
-  margin: 3rem 0;
+  margin: 3rem 0 5rem;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
 }
@@ -87,25 +87,21 @@ body:not(.opening) .logo__svg {
   dominant-baseline: middle;
 }
 
-.gnav__link {
-  display: block;
-  height: 4rem;
-  letter-spacing: .5rem;
-  font-size: 1.2rem;
-  line-height: 4rem;
+.iconList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  margin: 2rem 0;
+  -webkit-box-pack: center;
+  justify-content: center;
 }
 
-.search {
-  display: inline-block;
-  height: 40px;
-  margin-bottom: 2rem;
+.iconList__item {
+  margin: 0 .7rem;
 }
 
-.search__box {
-  display: none;
-}
-
-.search__icon {
+.iconList__icon {
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -118,8 +114,21 @@ body:not(.opening) .logo__svg {
   line-height: 40px;
 }
 
-.search__icon:hover {
+.iconList__icon:hover {
   background-color: #ff1a84;
+}
+
+.gnav__link {
+  display: block;
+  height: 4rem;
+  letter-spacing: .5rem;
+  font-size: 1.2rem;
+  line-height: 4rem;
+}
+
+.search {
+  display: none;
+  margin: 3rem 0;
 }
 
 input.gsc-search-button-v2 {
