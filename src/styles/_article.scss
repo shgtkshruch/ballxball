@@ -4,6 +4,10 @@
   &:first-child {
     padding-top: $margin;
   }
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
   margin-bottom: $margin;
   padding-bottom: $margin;
   border-bottom: $border-width solid;
