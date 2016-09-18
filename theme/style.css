@@ -59,11 +59,17 @@ ul {
 }
 
 .logo {
+  display: inline-block;
   margin: 3rem 0 5rem;
+  pointer-events: none;
   font-family: 'Raleway', sans-serif;
 }
 
-body:not(.opening) .logo {
+.header--animationEnd .logo {
+  pointer-events: initial;
+}
+
+body:not(.opening) .logo__svg {
   width: 168px;
   height: 84px;
 }
