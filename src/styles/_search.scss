@@ -6,7 +6,10 @@
     display: none;
   }
   &__icon {
-    padding: 1.3rem;
+    $size: 40px;
+    width: $size;
+    height: $size;
+    line-height: $size;
     background-color: #000;
     color: #fff;
     font-size: 2rem;

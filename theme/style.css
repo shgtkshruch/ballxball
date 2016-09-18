@@ -128,12 +128,14 @@ body:not(.opening) .logo {
 }
 
 .search__icon {
-  padding: 1.3rem;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   color: #fff;
   border-radius: 50%;
   background-color: #000;
   font-size: 2rem;
+  line-height: 40px;
 }
 
 input.gsc-search-button-v2 {
