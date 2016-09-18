@@ -12,15 +12,18 @@
     var ds = 0.05;
     var _svgWidth = _circleR * 4 * (1 + ds);
     var _svgHeight = _circleR * 2 * (1 + ds);
-    var textWidth = 104;
-    var textHeight = 31;
 
     var _s = Snap("#logo");
+
+    var _title = Snap.parse('<title>ballxball</title');
+    _s.append(_title);
+    _s.select('desc').remove();
+
     var _circle = _s.circle(_svgWidth / 2 - _circleR, _svgHeight / 2, _circleR).attr({ fill: colorPink, id: 'circlePink' });
 
     var _circle2 = _s.circle(_svgWidth / 2 + _circleR, _svgHeight / 2, _circleR).attr({ fill: colorBlue, id: 'circleBlue' });
 
-    var _siteName = _s.text(_svgWidth / 2 - textWidth / 2, _svgHeight / 2 + textHeight / 2 - 5, ['ball', 'x', 'ball']).attr({
+    var _siteName = _s.text(_svgWidth / 2, _svgHeight / 2, ['ball', 'x', 'ball']).attr({
       id: 'logoText',
       'font-size': _circleR / 1.5,
       fill: '#fff'

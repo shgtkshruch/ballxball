@@ -10,10 +10,13 @@
     const ds = 0.05;
     const svgWidth = circleR * 4 * (1 + ds);
     const svgHeight = circleR * 2 * (1 + ds);
-    const textWidth = 104;
-    const textHeight = 31;
 
     const s = Snap("#logo")
+
+    const title = Snap.parse('<title>ballxball</title');
+    s.append(title);
+    s.select('desc').remove();
+
     const circle1 = s
       .circle(svgWidth / 2 - circleR, svgHeight / 2, circleR)
       .attr({fill: colorPink, id: 'circlePink'});
@@ -23,7 +26,7 @@
       .attr({fill: colorBlue, id: 'circleBlue'});
 
     const siteName = s
-      .text(svgWidth / 2 - textWidth / 2, svgHeight / 2 + textHeight / 2 - 5, ['ball', 'x', 'ball'])
+      .text(svgWidth / 2, svgHeight / 2, ['ball', 'x', 'ball'])
       .attr({
         id: 'logoText',
         'font-size': circleR / 1.5,
