@@ -1,9 +1,6 @@
 .article {
   $margin: 3rem;
   $border-width: 5px;
-  &:first-child {
-    padding-top: $margin;
-  }
   &:last-child {
     margin-bottom: 0;
     border-bottom: none;
@@ -15,9 +12,6 @@
   @media (min-width: $screen-sm) {
     $margin: 7rem;
     $border-width: 5px;
-    &:first-child {
-      padding-top: $margin;
-    }
     margin-bottom: $margin;
     padding-bottom: $margin;
   }

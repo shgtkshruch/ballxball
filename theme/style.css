@@ -30,6 +30,7 @@ ul {
 }
 
 .header {
+  margin-bottom: 7rem;
   text-align: center;
 }
 
@@ -141,10 +142,6 @@ input.gsc-search-button-v2 {
   padding-bottom: 3rem;
   border-bottom: 5px solid;
   font-size: 1.6rem;
-}
-
-.article:first-child {
-  padding-top: 3rem;
 }
 
 .article:last-child {
@@ -416,9 +413,5 @@ input.gsc-search-button-v2 {
   .article {
     margin-bottom: 7rem;
     padding-bottom: 7rem;
-  }
-
-  .article:first-child {
-    padding-top: 7rem;
   }
 }
