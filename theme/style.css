@@ -137,11 +137,17 @@ body:not(.opening) .logo__svg {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
   color: #fff;
   border-radius: 50%;
   background-color: #000;
   font-size: 2rem;
   line-height: 40px;
+}
+
+.search__icon:hover {
+  background-color: #ff1a84;
 }
 
 input.gsc-search-button-v2 {
