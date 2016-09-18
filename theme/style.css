@@ -91,8 +91,8 @@ body:not(.opening) .logo__svg {
 .gnav__link {
   display: block;
   height: 4rem;
-  padding-bottom: .5rem;
-  font-size: 1.6rem;
+  letter-spacing: .5rem;
+  font-size: 1.2rem;
   line-height: 4rem;
 }
 
