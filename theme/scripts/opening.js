@@ -3,13 +3,41 @@
 (function () {
   'use strict';
 
+  var body = document.querySelector('body');
+  var colorPink = '#ff1a84';
+  var colorBlue = '#0f2c70';
+
+  if (!body.classList.contains('opening')) {
+    var _circleR = 40;
+    var ds = 0.05;
+    var _svgWidth = _circleR * 4 * (1 + ds);
+    var _svgHeight = _circleR * 2 * (1 + ds);
+    var textWidth = 104;
+    var textHeight = 31;
+
+    var _s = Snap("#logo").attr({ width: _svgWidth, height: _svgHeight });
+    var _circle = _s.circle(_svgWidth / 2 - _circleR, _svgHeight / 2, _circleR).attr({ fill: colorPink, id: 'circlePink' });
+
+    var _circle2 = _s.circle(_svgWidth / 2 + _circleR, _svgHeight / 2, _circleR).attr({ fill: colorBlue, id: 'circleBlue' });
+
+    var _siteName = _s.text(_svgWidth / 2 - textWidth / 2, _svgHeight / 2 + textHeight / 2 - 5, ['ball', 'x', 'ball']).attr({
+      id: 'logoText',
+      'font-size': _circleR / 1.5,
+      fill: '#fff'
+    });
+    _siteName.select(':nth-child(1)').attr({ fill: colorBlue });
+    _siteName.select(':nth-child(3)').attr({ fill: colorPink });
+
+    animation();
+
+    return;
+  }
+
   var svgWidth = window.innerWidth;
   var svgHeight = window.innerHeight;
   var circleR = svgWidth > svgHeight ? svgHeight / 5 : svgWidth / 5;
   var dy = svgHeight / 2;
   var duration = 1500;
-  var colorPink = '#ff1a84';
-  var colorBlue = '#0f2c70';
 
   var s = Snap("#logo").attr({ width: svgWidth, height: svgHeight });
   var circle1 = s.circle(svgWidth / 2, circleR * -1, circleR).attr({ fill: colorPink, id: 'circlePink' });
@@ -104,6 +132,7 @@
     articles.forEach(function (article) {
       article.classList.add('article--slideUp');
     });
+
     var header = document.querySelector('.header');
     header.classList.add('header--animationEnd');
 

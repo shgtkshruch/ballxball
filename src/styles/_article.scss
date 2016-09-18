@@ -9,16 +9,6 @@
   padding-bottom: $margin;
   border-bottom: $border-width solid;
   font-size: $font-size;
-  opacity: 0;
-  transform: translateY(100vh);
-  transition-property: transform opacity;
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(.55,0,.1,1);
-  @for $i from 1 through 10 {
-    &:nth-child(#{$i}) {
-      transition-delay: 150ms * $i;
-    }
-  }
   @media (min-width: $screen-sm) {
     $margin: 7rem;
     $border-width: 5px;
@@ -28,9 +18,21 @@
     margin-bottom: $margin;
     padding-bottom: $margin;
   }
+  .opening & {
+    opacity: 0;
+    transform: translateY(100vh);
+    transition-property: transform opacity;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(.55,0,.1,1);
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        transition-delay: 150ms * $i;
+      }
+    }
+  }
   &--slideUp  {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
   &__header {
     display: flex;

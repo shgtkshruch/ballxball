@@ -1,13 +1,47 @@
 (() => {
   'use strict';
 
+  const body = document.querySelector('body');
+  const colorPink = '#ff1a84';
+  const colorBlue = '#0f2c70';
+
+  if (!body.classList.contains('opening')) {
+    const circleR = 40;
+    const ds = 0.05;
+    const svgWidth = circleR * 4 * (1 + ds);
+    const svgHeight = circleR * 2 * (1 + ds);
+    const textWidth = 104;
+    const textHeight = 31;
+
+    const s = Snap("#logo").attr({width: svgWidth, height: svgHeight});
+    const circle1 = s
+      .circle(svgWidth / 2 - circleR, svgHeight / 2, circleR)
+      .attr({fill: colorPink, id: 'circlePink'});
+
+    const circle2 = s
+      .circle(svgWidth / 2 + circleR, svgHeight / 2, circleR)
+      .attr({fill: colorBlue, id: 'circleBlue'});
+
+    const siteName = s
+      .text(svgWidth / 2 - textWidth / 2, svgHeight / 2 + textHeight / 2 - 5, ['ball', 'x', 'ball'])
+      .attr({
+        id: 'logoText',
+        'font-size': circleR / 1.5,
+        fill: '#fff',
+      });
+    siteName.select(':nth-child(1)').attr({fill: colorBlue});
+    siteName.select(':nth-child(3)').attr({fill: colorPink});
+
+    animation();
+
+    return;
+  }
+
   const svgWidth = window.innerWidth;
   const svgHeight = window.innerHeight;
   const circleR = (svgWidth > svgHeight) ? svgHeight / 5 : svgWidth / 5;
   const dy = svgHeight / 2;
   const duration = 1500;
-  const colorPink = '#ff1a84';
-  const colorBlue = '#0f2c70';
 
   const s = Snap("#logo").attr({width: svgWidth, height: svgHeight});
   const circle1 = s
@@ -108,6 +142,7 @@
     articles.forEach(article => {
       article.classList.add('article--slideUp');
     });
+
     const header = document.querySelector('.header');
     header.classList.add('header--animationEnd');
 
