@@ -22,4 +22,8 @@
   circle {
     transform-origin: 50%;
   }
+  text {
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
 }

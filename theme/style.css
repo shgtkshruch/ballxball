@@ -30,8 +30,11 @@ ul {
 }
 
 .header {
-  padding: 0 1em;
   text-align: center;
+}
+
+.header--animationEnd {
+  padding: 0 1em;
 }
 
 .header__bottom--slideUp {
@@ -78,6 +81,11 @@ body:not(.opening) .logo__svg {
 .logo circle {
   -webkit-transform-origin: 50%;
   transform-origin: 50%;
+}
+
+.logo text {
+  text-anchor: middle;
+  dominant-baseline: middle;
 }
 
 .gnav__container {

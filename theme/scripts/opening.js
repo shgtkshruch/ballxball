@@ -36,7 +36,6 @@
   var svgWidth = window.innerWidth;
   var svgHeight = window.innerHeight;
   var circleR = svgWidth > svgHeight ? svgHeight / 5 : svgWidth / 5;
-  var dy = svgHeight / 2;
   var duration = 1500;
 
   var s = Snap("#logo").attr({ width: svgWidth, height: svgHeight });
@@ -59,8 +58,8 @@
   siteName.select(':nth-child(1)').attr({ fill: colorBlue });
   siteName.select(':nth-child(3)').attr({ fill: colorPink });
 
-  circle1.animate({ cy: dy }, duration, mina.bounce);
-  circle2.animate({ cy: dy }, duration, mina.bounce, move);
+  circle1.animate({ cy: svgHeight / 2 }, duration, mina.bounce);
+  circle2.animate({ cy: svgHeight / 2 }, duration, mina.bounce, move);
 
   function move() {
     circle1.animate({ cx: svgWidth / 2 - circleR }, 800, mina.easeinout);
@@ -68,12 +67,9 @@
   }
 
   function text() {
-    var textWidth = siteName.getBBox().width;
-    var textHeight = siteName.getBBox().height;
-
     siteName.attr({
-      x: svgWidth / 2 - textWidth / 2,
-      y: svgHeight / 2 + textHeight / 2 - 30
+      x: svgWidth / 2,
+      y: svgHeight / 2
     }).animate({ opacity: 1 }, 1000, mina.easein, scale);
   }
 
@@ -82,8 +78,6 @@
     var ds = 0.05;
     var svgWidth = circleR * 4 * (1 + ds);
     var svgHeight = circleR * 2 * (1 + ds);
-    var textWidth = 104;
-    var textHeight = 31;
     var duration = 500;
     var easing = 'linear';
 
@@ -121,8 +115,8 @@
 
     anime({
       targets: '#logoText ',
-      x: svgWidth / 2 - textWidth / 2,
-      y: svgHeight / 2 + textHeight / 2 - 5,
+      x: svgWidth / 2,
+      y: svgHeight / 2,
       'font-size': circleR / 1.5,
       duration: duration,
       easing: easing,
