@@ -12,25 +12,27 @@
     position: relative;
     width: calc(100% / 3);
     font-size: 1.4rem;
-    &:first-child::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 1px;
-      background-color: currentcolor;
-      transform: rotate(30deg);
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 1px;
-      background-color: currentcolor;
-      transform: rotate(30deg);
+    @media (min-width: $screen-sm) {
+      &:first-child::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 1px;
+        background-color: currentcolor;
+        transform: rotate(30deg);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background-color: currentcolor;
+        transform: rotate(30deg);
+      }
     }
   }
   &__link {
@@ -48,9 +50,11 @@
       transform: translateX(-50%);
       width: 0;
       height: 3px;
-      margin-left: -8px;
       background-color: currentcolor;
       transition: width .2s;
+      @media (min-width: $screen-sm) {
+        margin-left: -8px;
+      }
     }
     &:hover {
       &::before {
