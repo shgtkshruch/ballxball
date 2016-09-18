@@ -15,7 +15,7 @@
     var textWidth = 104;
     var textHeight = 31;
 
-    var _s = Snap("#logo").attr({ width: _svgWidth, height: _svgHeight });
+    var _s = Snap("#logo");
     var _circle = _s.circle(_svgWidth / 2 - _circleR, _svgHeight / 2, _circleR).attr({ fill: colorPink, id: 'circlePink' });
 
     var _circle2 = _s.circle(_svgWidth / 2 + _circleR, _svgHeight / 2, _circleR).attr({ fill: colorBlue, id: 'circleBlue' });

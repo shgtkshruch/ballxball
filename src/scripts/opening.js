@@ -13,7 +13,7 @@
     const textWidth = 104;
     const textHeight = 31;
 
-    const s = Snap("#logo").attr({width: svgWidth, height: svgHeight});
+    const s = Snap("#logo")
     const circle1 = s
       .circle(svgWidth / 2 - circleR, svgHeight / 2, circleR)
       .attr({fill: colorPink, id: 'circlePink'});

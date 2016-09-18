@@ -1,6 +1,13 @@
 .logo {
   font-family: 'Raleway', sans-serif;
   margin: 3rem 0 5rem;
+  body:not(.opening) & {
+    $circleR: 40px;
+    $ds: 0.05;
+
+    width: $circleR * 4 * (1 + $ds);
+    height: $circleR * 2 * (1 + $ds);
+  }
   circle {
     transform-origin: 50%;
   }

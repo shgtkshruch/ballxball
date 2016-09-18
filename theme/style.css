@@ -62,6 +62,11 @@ ul {
   font-family: 'Raleway', sans-serif;
 }
 
+body:not(.opening) .logo {
+  width: 168px;
+  height: 84px;
+}
+
 .logo circle {
   -webkit-transform-origin: 50%;
   transform-origin: 50%;
