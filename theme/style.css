@@ -142,15 +142,29 @@ input.gsc-search-button-v2 {
 }
 
 .article {
+  position: relative;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 5px solid;
   font-size: 1.6rem;
+}
+
+.article::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  content: '';
+  background-color: #0f2c70;
 }
 
 .article:last-child {
   margin-bottom: 0;
   border-bottom: none;
+}
+
+.article:last-child::after {
+  content: none;
 }
 
 .opening .article {
@@ -377,7 +391,7 @@ input.gsc-search-button-v2 {
   margin: 0 auto;
   padding: 3rem 0;
   text-align: center;
-  border-top: 5px solid;
+  border-top: 2px solid;
 }
 
 @media (min-width: 780px) {

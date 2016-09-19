@@ -1,14 +1,26 @@
 .article {
   $margin: 3rem;
   $border-width: 5px;
+  position: relative;
+  margin-bottom: $margin;
+  padding-bottom: $margin;
+  font-size: $font-size;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background-color: $color-blue;
+  }
   &:last-child {
     margin-bottom: 0;
     border-bottom: none;
+    &::after {
+      content: none;
+    }
   }
-  margin-bottom: $margin;
-  padding-bottom: $margin;
-  border-bottom: $border-width solid;
-  font-size: $font-size;
   @media (min-width: $screen-sm) {
     $margin: 7rem;
     $border-width: 5px;
