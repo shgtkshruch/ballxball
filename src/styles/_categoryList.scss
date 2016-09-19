@@ -1,11 +1,13 @@
 .categoryList {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   @media (min-width: $screen-sm) {
     display: block;
   }
   &__item {
     font-size: $font-size;
+    text-align: center;
     &:not(:last-child) {
       margin-bottom: $margin-aside-item;
       margin-right: 2rem;
@@ -13,11 +15,15 @@
         margin-right: 0;
       }
     }
+    @media (min-width: $screen-sm) {
+      text-align: start;
+    }
   }
   &__icon {
+    $size-aside-icon: 5rem;
+    font-size: 2rem;
     position: relative;
     display: inline-block;
-    margin-right: 1rem;
     width: $size-aside-icon;
     height: $size-aside-icon;
     line-height: $size-aside-icon;
@@ -35,6 +41,24 @@
       background-color: $color-pink;
       border-radius: 50%;
       z-index: -1;
+    }
+    @media (min-width: $screen-sm) {
+      $size-aside-icon: 3rem;
+      font-size: $font-size;
+      position: relative;
+      display: inline-block;
+      width: $size-aside-icon;
+      height: $size-aside-icon;
+      line-height: $size-aside-icon;
+      margin-right: 1rem;
+    }
+  }
+  &__text {
+    display: block;
+    font-size: 1.3rem;
+    @media (min-width: $screen-sm) {
+      display: inline;
+      font-size: $font-size;
     }
   }
 }

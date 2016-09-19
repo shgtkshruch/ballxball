@@ -1,7 +1,7 @@
 extends partials/layout
 
 block body
-  body.opening
+  body
     include partials/header
 
     .l-container
@@ -33,8 +33,9 @@ block body
             - categories[5] = {text: 'Book', class: 'fa fa-book'};
             each category, i in categories
               li.categoryList__item
-                i.categoryList__icon(class=`${category.class}`)
-                a.categoryList__link.hover-line-effect(href="#")= category.text
+                a.categoryList__link(href="#")
+                  i.categoryList__icon(class=`${category.class}`)
+                  span.categoryList__text.hover-line-effect= category.text
         section.aside__item
           h3.aside__heading popular post
           ol.popularPost

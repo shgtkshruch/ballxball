@@ -491,11 +491,14 @@ input.gsc-search-button-v2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .categoryList__item {
+  text-align: center;
   font-size: 1.6rem;
 }
 
@@ -507,14 +510,14 @@ input.gsc-search-button-v2 {
 .categoryList__icon {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin-right: 1rem;
+  width: 5rem;
+  height: 5rem;
   text-align: center;
   color: #fff;
   border-radius: 50%;
   background-color: #0f2c70;
-  line-height: 30px;
+  font-size: 2rem;
+  line-height: 5rem;
 }
 
 .categoryList__icon::after {
@@ -527,6 +530,11 @@ input.gsc-search-button-v2 {
   content: '';
   border-radius: 50%;
   background-color: #ff1a84;
+}
+
+.categoryList__text {
+  display: block;
+  font-size: 1.3rem;
 }
 
 .popularPost {
@@ -695,6 +703,25 @@ input.gsc-search-button-v2 {
 
   .categoryList__item:not(:last-child) {
     margin-right: 0;
+  }
+
+  .categoryList__item {
+    text-align: start;
+  }
+
+  .categoryList__icon {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+
+  .categoryList__text {
+    display: inline;
+    font-size: 1.6rem;
   }
 
   .hidden-sm {
