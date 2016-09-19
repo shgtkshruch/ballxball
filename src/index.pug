@@ -15,7 +15,7 @@ block body
                 br.hidden-sm
                 span.article__year 2016
             .article__main
-              h2.article__title
+              h2.article__title.hover-line-effect
                 a(href="page.html") WordPressの開発環境をDockerを使って一瞬で立ち上げる
               p.article__body WordPressの勉強をするときにまず最初にしなければならないのが、開発環境の構築。LAMPやVagrantなどを使った方法もありますが、今回はDockerを使った開発環境の構築のやり方を紹介します。
           - i++
@@ -24,10 +24,17 @@ block body
         section.categoryList.aside__item
           h3.aside__heading category
           ul
-            - categories = ['HTML', 'CSS', 'JavaScript', 'WordPress', 'Web Searvice', 'Book'];
+            - categories = [];
+            - categories[0] = {text: 'HTML', class: 'devicon-html5-plain'};
+            - categories[1] = {text: 'CSS', class: 'devicon-css3-plain'};
+            - categories[2] = {text: 'JavaScript', class: 'devicon-javascript-plain'};
+            - categories[3] = {text: 'WordPress', class: 'devicon-wordpress-plain'};
+            - categories[4] = {text: 'Web Searvice', class: 'fa fa-desktop'};
+            - categories[5] = {text: 'Book', class: 'fa fa-book'};
             each category, i in categories
               li.categoryList__item
-                a(href="#")= category
+                i.categoryList__icon(class=`${category.class}`)
+                a.categoryList__link.hover-line-effect(href="#")= category.text
         section.aside__item
           h3.aside__heading popular post
           ul
