@@ -53,12 +53,12 @@
     margin-bottom: 2rem;
     @media (min-width: $screen-sm) {
       width: $width-article-info;
-      margin-right: $padding-article-info;
+      margin-right: $margin-article-info;
     }
   }
   &__main {
     @media (min-width: $screen-sm) {
-      width: calc(100% - #{$width-article-info});
+      width: calc(100% - #{$width-article-info} - #{$margin-article-info});
     }
   }
   &__date {
