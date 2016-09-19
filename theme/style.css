@@ -248,14 +248,40 @@ input.gsc-search-button-v2 {
 }
 
 .article__date {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: .3rem 1rem;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #0f2c70;
   font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
 }
 
+.article__date::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+  border-radius: 3px;
+  background-color: #ff1a84;
+}
+
+.article__year::before {
+  content: ', ';
+}
+
 .article__title {
   position: relative;
   margin: 0 0 2rem;
+  color: #000;
   font-size: 2.7rem;
   line-height: 1.7;
 }
@@ -420,6 +446,10 @@ input.gsc-search-button-v2 {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
 }
 
+.hidden-sm {
+  display: none;
+}
+
 @media (min-width: 930px) {
   .l-main {
     margin: 0 auto;
@@ -499,27 +529,25 @@ input.gsc-search-button-v2 {
   }
 
   .article__date {
-    position: relative;
-    display: inline-block;
     width: 10rem;
     height: 10rem;
     padding: 2.8rem 0 0 0;
     text-align: center;
-    color: #fff;
     border-radius: 50%;
-    background-color: #0f2c70;
     line-height: 1.4;
   }
 
   .article__date::after {
-    position: absolute;
-    z-index: -1;
     top: -3px;
     left: -3px;
-    width: 100%;
-    height: 100%;
-    content: '';
     border-radius: 50%;
-    background-color: #ff1a84;
+  }
+
+  .article__year::before {
+    content: '';
+  }
+
+  .hidden-sm {
+    display: block;
   }
 }
