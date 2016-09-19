@@ -1,7 +1,7 @@
 extends partials/layout
 
 block body
-  body.opening
+  body
     include partials/header
 
     main.l-main
@@ -10,11 +10,7 @@ block body
         article.article
           header.article__header
             time.article__date Sep 15, 2016
-            ul.article__tags
-              li.article__tag
-                a.article__tagLink(href="#") WordPress
-              li.article__tag
-                a.article__tagLink(href="#") Docker
+            a.article__category(href="#") Docker
           h2.article__title
             a(href="page.html") WordPressの開発環境をDockerを使って一瞬で立ち上げる
           div.article__body

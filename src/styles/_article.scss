@@ -41,22 +41,17 @@
     font-size: 1.6rem;
     font-weight: normal;
   }
-  &__tags {
-    margin-left: 2rem;
-    font-size: 0;
-  }
-  &__tag {
+  &__category {
     $height: 24px;
     position: relative;
     display: inline-block;
     height: $height;
     line-height: $height;
+    margin-left: 2rem;
+    padding-left: 2.5rem;
     font-size: 1.0rem;
     background-color: $color-gray;
     color: #000;
-    &:not(:first-child) {
-      margin-left: 2rem;
-    }
     &::before {
       $size: 7px;
       content: '';
@@ -78,6 +73,7 @@
       border-top: $height / 2 solid transparent;
       border-bottom: $height / 2 solid transparent;
       border-left: $height / 2 solid $color-gray;
+      transition: border-left-color .3s;
     }
     &:hover {
       color: #fff;
@@ -86,10 +82,6 @@
         border-left-color: $color-pink;
       }
     }
-  }
-  &__tagLink {
-    display: block;
-    padding-left: 2.5rem;
   }
   &__title {
     margin: 2rem 0;
