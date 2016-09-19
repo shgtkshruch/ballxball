@@ -1,6 +1,6 @@
 .aside {
   &__item {
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
     .opening & {
       opacity: 0;
       transform: translateY(100vh);
@@ -21,6 +21,6 @@
   &__heading {
     margin: 0 0 2rem;
     font-size: $font-size-heading;
-    line-height: 1;
+    line-height: 1.4;
   }
 }
