@@ -1,8 +1,30 @@
 .post {
-  margin-bottom: 6rem;
+  margin: 6rem 0;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__dates {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  &__datesIcon {
+    margin-right: 1rem;
+    color: $color-blue;
+  }
+  &__datesList {
+    display: flex;
+  }
+  &__dateItem {
+    &:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+  }
   &__title {
     font-size: 2.6rem;
-    margin: 5rem 0 3rem;
+    margin: 3rem 0;
   }
   &__body {
     font-size: $font-size;
