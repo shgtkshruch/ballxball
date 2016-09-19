@@ -1,7 +1,7 @@
 extends partials/layout
 
 block body
-  body
+  body.opening
     include partials/header
 
     .l-container
@@ -21,12 +21,20 @@ block body
           - i++
 
       aside.l-aside.aside
-        section.categoryList
-          h3.aide__heading category
+        section.categoryList.aside__item
+          h3.aside__heading category
           ul
             - categories = ['HTML', 'CSS', 'JavaScript', 'WordPress', 'Web Searvice', 'Book'];
             each category, i in categories
               li.categoryList__item
                 a(href="#")= category
+        section.aside__item
+          h3.aside__heading popular post
+          ul
+            - var i = 0;
+            while i < 5
+              li
+                a(href="#") 人気記事のタイトル
+              - i++
 
   include partials/footer

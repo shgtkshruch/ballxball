@@ -1,0 +1,20 @@
+.aside {
+  &__item {
+    .opening & {
+      opacity: 0;
+      transform: translateY(100vh);
+      transition-property: transform opacity;
+      transition-duration: 500ms;
+      transition-timing-function: cubic-bezier(.55,0,.1,1);
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          transition-delay: 150ms * $i;
+        }
+      }
+    }
+    &--slideUp {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  }
+}

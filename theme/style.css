@@ -431,6 +431,51 @@ input.gsc-search-button-v2 {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
 }
 
+.opening .aside__item {
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-property: -webkit-transform opacity;
+  transition-property: -webkit-transform opacity;
+  transition-property: transform opacity;
+  transition-property: transform opacity, -webkit-transform opacity;
+  -webkit-transform: translateY(100vh);
+  transform: translateY(100vh);
+  opacity: 0;
+}
+
+.opening .aside__item:nth-child(1) {
+  -webkit-transition-delay: 150ms;
+  transition-delay: 150ms;
+}
+
+.opening .aside__item:nth-child(2) {
+  -webkit-transition-delay: 300ms;
+  transition-delay: 300ms;
+}
+
+.opening .aside__item:nth-child(3) {
+  -webkit-transition-delay: 450ms;
+  transition-delay: 450ms;
+}
+
+.opening .aside__item:nth-child(4) {
+  -webkit-transition-delay: 600ms;
+  transition-delay: 600ms;
+}
+
+.opening .aside__item:nth-child(5) {
+  -webkit-transition-delay: 750ms;
+  transition-delay: 750ms;
+}
+
+.aside__item--slideUp {
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
 .hidden-sm {
   display: none;
 }

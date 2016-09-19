@@ -130,16 +130,15 @@
   }
 
   function slideUp() {
-    var articles = document.querySelectorAll('.article');
-    articles.forEach(function (article) {
-      article.classList.add('article--slideUp');
+    $('.article').each(function (i, article) {
+      return $(article).addClass('article--slideUp');
     });
 
-    var header = document.querySelector('.header');
-    header.classList.add('header--animationEnd');
+    $('.header').addClass('header--animationEnd');
 
-    var headerBottom = document.querySelector('.header__bottom');
-    headerBottom.classList.add('header__bottom--slideUp');
+    $('.header__bottom').addClass('header__bottom--slideUp');
+
+    $('.aside__item').addClass('aside__item--slideUp');
 
     animation();
   }

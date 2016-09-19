@@ -140,16 +140,13 @@
   }
 
   function slideUp() {
-    const articles = document.querySelectorAll('.article');
-    articles.forEach(article => {
-      article.classList.add('article--slideUp');
-    });
+    $('.article').each((i, article) => $(article).addClass('article--slideUp'));
 
-    const header = document.querySelector('.header');
-    header.classList.add('header--animationEnd');
+    $('.header').addClass('header--animationEnd');
 
-    const headerBottom = document.querySelector('.header__bottom');
-    headerBottom.classList.add('header__bottom--slideUp');
+    $('.header__bottom').addClass('header__bottom--slideUp');
+
+    $('.aside__item').addClass('aside__item--slideUp');
 
     animation();
   }
