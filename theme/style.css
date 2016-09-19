@@ -30,6 +30,7 @@ ul {
 }
 
 .l-main {
+  max-width: 93rem;
   padding: 0 1rem;
 }
 
@@ -396,7 +397,7 @@ input.gsc-search-button-v2 {
 }
 
 .footer {
-  max-width: 80rem;
+  max-width: 93rem;
   margin: 0 auto;
   padding: 3rem 0;
   text-align: center;
@@ -405,7 +406,6 @@ input.gsc-search-button-v2 {
 
 @media (min-width: 930px) {
   .l-main {
-    width: 93rem;
     margin: 0 auto;
     padding: 0;
   }
@@ -416,7 +416,7 @@ input.gsc-search-button-v2 {
 
   body:not(.opening) .header,
   .header--animationEnd {
-    width: 93rem;
+    max-width: 93rem;
     margin-right: auto;
     margin-left: auto;
   }

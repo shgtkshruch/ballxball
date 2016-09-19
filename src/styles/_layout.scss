@@ -1,8 +1,8 @@
 .l {
   &-main {
     padding: 0 1rem;
+    max-width: $width-main;
     @media (min-width: $screen-sm) {
-      width: $width-main;
       padding: 0;
       margin: 0 auto;
     }
