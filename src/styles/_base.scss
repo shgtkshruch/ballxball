@@ -23,8 +23,10 @@ a {
   transition: all .3s;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+

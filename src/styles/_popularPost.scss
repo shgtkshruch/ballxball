@@ -1,0 +1,39 @@
+.popularPost {
+  counter-reset: ranking;
+  &__item {
+    position: relative;
+    display: flex;
+    font-size: $font-size;
+    line-height: 1.4;
+    &:not(:last-child) {
+      margin-bottom: $margin-aside-item;
+    }
+    &::before {
+      counter-increment: ranking;
+      content: counter(ranking);
+      display: inline-block;
+      width: $size-aside-icon;
+      height: $size-aside-icon;
+      line-height: $size-aside-icon;
+      background-color: $color-blue;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      margin-right: 1rem;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: $diff-aside-icon;
+      left: $diff-aside-icon;
+      width: $size-aside-icon;
+      height: $size-aside-icon;
+      background-color: $color-pink;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+  &__link {
+    width: calc(100% - #{$size-aside-icon} - 1rem);
+  }
+}

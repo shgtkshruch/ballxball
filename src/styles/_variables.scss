@@ -8,11 +8,14 @@ $font-size-heading: 2.4rem;
 
 $padding-article-info: 3rem;
 $margin-main: 10rem;
+$margin-aside-item: 2rem;
 
 $width-article-info: 10rem;
 $width-main: $font-size * 50 + $width-article-info + $padding-article-info; // 930px
-$width-aside: 20rem;
+$width-aside: 30rem;
 $width-container: $width-main + $margin-main + $width-aside;
 
 $screen-sm: 930px;
 
+$size-aside-icon: 30px;
+$diff-aside-icon: 2px;

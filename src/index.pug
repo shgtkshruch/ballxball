@@ -37,11 +37,11 @@ block body
                 a.categoryList__link.hover-line-effect(href="#")= category.text
         section.aside__item
           h3.aside__heading popular post
-          ul
+          ol.popularPost
             - var i = 0;
             while i < 5
-              li
-                a(href="#") 人気記事のタイトル
+              li.popularPost__item
+                a.popularPost__link.hover-line-effect(href="#") WordPressの開発環境をDockerを使って一瞬で立ち上げる
               - i++
 
   include partials/footer
