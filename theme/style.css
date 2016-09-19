@@ -502,11 +502,12 @@ input.gsc-search-button-v2 {
     display: inline-block;
     width: 10rem;
     height: 10rem;
+    padding: 2.8rem 0 0 0;
     text-align: center;
     color: #fff;
     border-radius: 50%;
     background-color: #0f2c70;
-    line-height: 10rem;
+    line-height: 1.4;
   }
 
   .article__date::after {
