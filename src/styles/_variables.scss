@@ -6,9 +6,12 @@ $color-text: #333;
 $font-size: 1.6rem;
 
 $padding-article-info: 3rem;
+$margin-main: 10rem;
 
 $width-article-info: 10rem;
 $width-main: $font-size * 50 + $width-article-info + $padding-article-info; // 930px
+$width-aside: 20rem;
+$width-container: $width-main + $margin-main + $width-aside;
 
 $screen-sm: 930px;
 

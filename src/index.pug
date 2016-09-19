@@ -4,19 +4,29 @@ block body
   body
     include partials/header
 
-    main.l-main
-      - var i = 0;
-      while i < 10
-        article.article
-          header.article__header
-            time.article__date
-              | Sep 15
-              br.hidden-sm
-              span.article__year 2016
-          .article__main
-            h2.article__title
-              a(href="page.html") WordPressの開発環境をDockerを使って一瞬で立ち上げる
-            p.article__body WordPressの勉強をするときにまず最初にしなければならないのが、開発環境の構築。LAMPやVagrantなどを使った方法もありますが、今回はDockerを使った開発環境の構築のやり方を紹介します。
-        - i++
+    .l-container
+      main.l-main
+        - var i = 0;
+        while i < 10
+          article.article
+            header.article__header
+              time.article__date
+                | Sep 15
+                br.hidden-sm
+                span.article__year 2016
+            .article__main
+              h2.article__title
+                a(href="page.html") WordPressの開発環境をDockerを使って一瞬で立ち上げる
+              p.article__body WordPressの勉強をするときにまず最初にしなければならないのが、開発環境の構築。LAMPやVagrantなどを使った方法もありますが、今回はDockerを使った開発環境の構築のやり方を紹介します。
+          - i++
+
+      aside.l-aside.aside
+        section.categoryList
+          h3.aide__heading category
+          ul
+            - categories = ['HTML', 'CSS', 'JavaScript', 'WordPress', 'Web Searvice', 'Book'];
+            each category, i in categories
+              li.categoryList__item
+                a(href="#")= category
 
   include partials/footer
