@@ -1,7 +1,13 @@
-$screen-sm: 780px;
-
 $color-pink: #ff1a84;
 $color-blue: #0f2c70;
 $color-gray: #eee;
 
 $font-size: 1.6rem;
+
+$padding-article-info: 3rem;
+
+$width-article-info: 10rem;
+$width-main: $font-size * 50 + $width-article-info + $padding-article-info; // 930px
+
+$screen-sm: 930px;
+

@@ -1,7 +1,7 @@
 extends partials/layout
 
 block body
-  body.opening
+  body
     include partials/header
 
     main.l-main
@@ -11,10 +11,11 @@ block body
           header.article__header
             time.article__date Sep 15, 2016
             a.article__category.category(href="#") Docker
-          h2.article__title
-            a(href="page.html") WordPressの開発環境をDockerを使って一瞬で立ち上げる
-          div.article__body
-            p WordPressの勉強をするときにまず最初にしなければならないのが、開発環境の構築。LAMPやVagrantなどを使った方法もありますが、今回はDockerを使った開発環境の構築のやり方を紹介します。
+          .article__main
+            h2.article__title
+              a(href="page.html") WordPressの開発環境をDockerを使って一瞬で立ち上げる
+            div.article__body
+              p WordPressの勉強をするときにまず最初にしなければならないのが、開発環境の構築。LAMPやVagrantなどを使った方法もありますが、今回はDockerを使った開発環境の構築のやり方を紹介します。
         - i++
 
   include partials/footer

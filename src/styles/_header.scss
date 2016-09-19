@@ -8,7 +8,7 @@
     padding: 0;
     body:not(.opening) &,
     &--animationEnd {
-      width: $font-size * 50;
+      width: $width-main;
       margin-right: auto;
       margin-left: auto;
     }

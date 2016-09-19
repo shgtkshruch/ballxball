@@ -1,17 +1,21 @@
 .article {
   $margin: 3rem;
   $border-width: 5px;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   margin-bottom: $margin;
   padding-bottom: $margin;
   font-size: $font-size;
   &::after {
+    $width: 30px;
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 35px;
+    left: 50%;
+    width: $width;
     height: 2px;
+    margin-left: $width / 2 * -1;
     background-color: $color-blue;
   }
   &:last-child {
@@ -24,6 +28,7 @@
   @media (min-width: $screen-sm) {
     $margin: 7rem;
     $border-width: 5px;
+    flex-wrap: nowrap;
     margin-bottom: $margin;
     padding-bottom: $margin;
   }
@@ -44,20 +49,55 @@
     transform: translateY(0) !important;
   }
   &__header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
+    @media (min-width: $screen-sm) {
+      width: $width-article-info;
+      margin-right: $padding-article-info;
+    }
+  }
+  &__main {
+    @media (min-width: $screen-sm) {
+      width: calc(100% - #{$width-article-info});
+    }
   }
   &__date {
     font-family: 'Raleway', sans-serif;
     font-size: 1.6rem;
     font-weight: normal;
+    @media (min-width: $screen-sm) {
+      $size: $width-article-info;
+      position: relative;
+      display: inline-block;
+      width: $size;
+      height: $size;
+      line-height: $size;
+      background-color: $color-blue;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      &::after {
+        $diff: -3px;
+        content: '';
+        position: absolute;
+        top: $diff;
+        left: $diff;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $color-pink;
+        z-index: -1;
+      }
+    }
   }
   &__category {
-    margin-left: 2rem;
+    width: 100%;
+    text-align: center;
+    text-indent: -12px;
+    @media (min-width: $screen-sm) {
+      margin-top: 2rem;
+    }
   }
   &__title {
-    margin: 2rem 0;
+    margin: 0 0 2rem;
     font-size: 2.7rem;
     &:hover {
       color: $color-pink;
