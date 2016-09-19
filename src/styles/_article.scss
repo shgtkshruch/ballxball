@@ -88,14 +88,6 @@
       }
     }
   }
-  &__category {
-    width: 100%;
-    text-align: center;
-    text-indent: -12px;
-    @media (min-width: $screen-sm) {
-      margin-top: 2rem;
-    }
-  }
   &__title {
     position: relative;
     margin: 0 0 2rem;

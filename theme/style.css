@@ -249,12 +249,6 @@ input.gsc-search-button-v2 {
   font-weight: normal;
 }
 
-.article__category {
-  width: 100%;
-  text-align: center;
-  text-indent: -12px;
-}
-
 .article__title {
   position: relative;
   margin: 0 0 2rem;
@@ -510,9 +504,5 @@ input.gsc-search-button-v2 {
     content: '';
     border-radius: 50%;
     background-color: #ff1a84;
-  }
-
-  .article__category {
-    margin-top: 2rem;
   }
 }
