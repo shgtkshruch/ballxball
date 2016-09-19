@@ -6,8 +6,8 @@
   line-height: $height;
   padding-left: 2.5rem;
   font-size: 1.0rem;
-  background-color: $color-gray;
-  color: #000;
+  background-color: $color-blue;
+  color: #fff;
   &::before {
     $size: 7px;
     content: '';
@@ -28,11 +28,10 @@
     left: 100%;
     border-top: $height / 2 solid transparent;
     border-bottom: $height / 2 solid transparent;
-    border-left: $height / 2 solid $color-gray;
+    border-left: $height / 2 solid $color-blue;
     transition: border-left-color .3s;
   }
   &:hover {
-    color: #fff;
     background-color: $color-pink;
     &::after {
       border-left-color: $color-pink;

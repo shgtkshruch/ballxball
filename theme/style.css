@@ -271,8 +271,8 @@ input.gsc-search-button-v2 {
   display: inline-block;
   height: 24px;
   padding-left: 2.5rem;
-  color: #000;
-  background-color: #eee;
+  color: #fff;
+  background-color: #0f2c70;
   font-size: 1.0rem;
   line-height: 24px;
 }
@@ -299,11 +299,10 @@ input.gsc-search-button-v2 {
   transition: border-left-color .3s;
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
-  border-left: 12px solid #eee;
+  border-left: 12px solid #0f2c70;
 }
 
 .category:hover {
-  color: #fff;
   background-color: #ff1a84;
 }
 
