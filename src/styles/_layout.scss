@@ -13,6 +13,8 @@
     @media (min-width: $screen-sm) {
       width: calc(100% - 5rem - #{$width-aside});
       margin-right: 5rem;
+      padding-right: 5rem;
+      border-right: 1px solid $color-blue;
     }
   }
   &-aside {
