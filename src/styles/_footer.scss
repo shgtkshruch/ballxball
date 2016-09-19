@@ -1,7 +1,20 @@
 .footer {
+  position: relative;
   max-width: $width-main;
   padding: 3rem 0;
   margin: 0 auto;
-  border-top: 2px solid;
   text-align: center;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $color-blue;
+    background: -moz-linear-gradient(left, #ffffff 0%, $color-blue 50%, #ffffff 100%);
+    background: -webkit-linear-gradient(left, #ffffff 0%,$color-blue 50%,#ffffff 100%);
+    background: linear-gradient(to right, #ffffff 0%,$color-blue 50%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 );
+  }
 }
