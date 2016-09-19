@@ -11,7 +11,7 @@
   }
   &-main {
     @media (min-width: $screen-sm) {
-      width: $width-main;
+      width: calc(100% - 5rem - #{$width-aside});
       margin-right: 5rem;
     }
   }
@@ -22,7 +22,7 @@
   }
   &-footer {
     @media (min-width: $screen-sm) {
-      width: $width-container;
+      max-width: $width-container;
     }
   }
 }
