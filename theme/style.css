@@ -487,11 +487,20 @@ input.gsc-search-button-v2 {
   line-height: 1;
 }
 
+.categoryList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .categoryList__item {
   font-size: 1.6rem;
 }
 
 .categoryList__item:not(:last-child) {
+  margin-right: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -678,6 +687,14 @@ input.gsc-search-button-v2 {
 
   .article__year::before {
     content: '';
+  }
+
+  .categoryList {
+    display: block;
+  }
+
+  .categoryList__item:not(:last-child) {
+    margin-right: 0;
   }
 
   .hidden-sm {
