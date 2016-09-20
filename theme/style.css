@@ -544,8 +544,8 @@ body:not(.opening) .logo__svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.6rem;
-  line-height: 1.4;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
 
 .popularPost__item:not(:last-child) {
