@@ -1,0 +1,46 @@
+.date {
+  position: relative;
+  display: inline-block;
+  padding: .3rem 1rem;
+  border-radius: 3px;
+  background-color: $color-blue;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-pink;
+    border-radius: 3px;
+    transform: rotate(5deg);
+    z-index: -1;
+  }
+  @media (min-width: $screen-sm) {
+    $size: $size-article-date;
+    width: $size;
+    height: $size;
+    padding: 2.8rem 0 0 0;
+    line-height: 1.4;
+    border-radius: 50%;
+    text-align: center;
+    &::after {
+      $diff: -3px;
+      top: $diff;
+      left: $diff;
+      border-radius: 50%;
+    }
+  }
+  &__year {
+    &::before {
+      content: ', ';
+      @media (min-width: $screen-sm) {
+        content: '';
+      }
+    }
+  }
+}

@@ -9,9 +9,9 @@ $font-size-heading: 2.4rem;
 $margin-article-info: 3rem;
 $margin-main: 10rem;
 $margin-aside-item: 2rem;
+$size-article-date: 10rem;
 
-$width-article-info: 10rem;
-$width-main: $font-size * 50 + $width-article-info + $margin-article-info; // 930px
+$width-main: $font-size * 50 + $size-article-date + $margin-article-info; // 930px
 $width-aside: 30rem;
 $width-container: $width-main + $margin-main + $width-aside;
 

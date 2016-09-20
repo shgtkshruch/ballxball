@@ -1,7 +1,7 @@
 extends partials/layout
 
 block body
-  body.opening
+  body
     include partials/header
 
     .l-container
@@ -10,39 +10,16 @@ block body
         while i < 10
           article.article
             header.article__header
-              time.article__date
+              time.article__date.date
                 | Sep 15
                 br.hidden-sm
-                span.article__year 2016
+                span.date__year 2016
             .article__main
               h2.article__title.hover-line-effect
                 a(href="page.html") WordPressの開発環境をDockerを使って一瞬で立ち上げる
               p.article__body WordPressの勉強をするときにまず最初にしなければならないのが、開発環境の構築。LAMPやVagrantなどを使った方法もありますが、今回はDockerを使った開発環境の構築のやり方を紹介します。
           - i++
 
-      aside.l-aside.aside
-        section.aside__item
-          h3.aside__heading category
-          ul.categoryList
-            - categories = [];
-            - categories[0] = {text: 'HTML', class: 'devicon-html5-plain'};
-            - categories[1] = {text: 'CSS', class: 'devicon-css3-plain'};
-            - categories[2] = {text: 'JavaScript', class: 'devicon-javascript-plain'};
-            - categories[3] = {text: 'WordPress', class: 'devicon-wordpress-plain'};
-            - categories[4] = {text: 'Web Searvice', class: 'fa fa-desktop'};
-            - categories[5] = {text: 'Book', class: 'fa fa-book'};
-            each category, i in categories
-              li.categoryList__item
-                a.categoryList__link(href="#")
-                  i.categoryList__icon(class=`${category.class}`)
-                  span.categoryList__text.hover-line-effect= category.text
-        section.aside__item
-          h3.aside__heading popular post
-          ol.popularPost
-            - var i = 0;
-            while i < 5
-              li.popularPost__item
-                a.popularPost__link.hover-line-effect(href="#") WordPressの開発環境をDockerを使って一瞬で立ち上げる
-              - i++
+      include partials/aside
 
   include partials/footer

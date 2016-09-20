@@ -249,7 +249,18 @@ input.gsc-search-button-v2 {
   margin-bottom: 2rem;
 }
 
-.article__date {
+.article__title {
+  margin: 0 0 2rem;
+  color: #000;
+  font-size: 2.4rem;
+  line-height: 1.4;
+}
+
+.article__body {
+  margin: 0;
+}
+
+.date {
   position: relative;
   display: inline-block;
   padding: .3rem 1rem;
@@ -261,7 +272,7 @@ input.gsc-search-button-v2 {
   font-weight: normal;
 }
 
-.article__date::after {
+.date::after {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -275,19 +286,8 @@ input.gsc-search-button-v2 {
   background-color: #ff1a84;
 }
 
-.article__year::before {
+.date__year::before {
   content: ', ';
-}
-
-.article__title {
-  margin: 0 0 2rem;
-  color: #000;
-  font-size: 2.4rem;
-  line-height: 1.4;
-}
-
-.article__body {
-  margin: 0;
 }
 
 .category {
@@ -335,49 +335,32 @@ input.gsc-search-button-v2 {
 }
 
 .post {
-  margin: 6rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .post__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-  -ms-flex-align: center;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.post__dates {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  font-size: 1.2rem;
-  -webkit-box-align: center;
-  align-items: center;
+.post__category {
+  margin-left: 2rem;
 }
 
-.post__datesIcon {
-  margin-right: 1rem;
-  color: #0f2c70;
-}
-
-.post__datesList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.post__dateItem:not(:first-child) {
-  margin-left: 1.5rem;
+.post__main {
+  max-width: 100%;
 }
 
 .post__title {
-  margin: 3rem 0;
+  margin: 0 0 3rem;
   font-size: 2.6rem;
+  line-height: 1.4;
 }
 
 .post__body {
@@ -674,7 +657,7 @@ input.gsc-search-button-v2 {
     width: calc(100% - 10rem - 3rem);
   }
 
-  .article__date {
+  .date {
     width: 10rem;
     height: 10rem;
     padding: 2.8rem 0 0 0;
@@ -683,14 +666,27 @@ input.gsc-search-button-v2 {
     line-height: 1.4;
   }
 
-  .article__date::after {
+  .date::after {
     top: -3px;
     left: -3px;
     border-radius: 50%;
   }
 
-  .article__year::before {
+  .date__year::before {
     content: '';
+  }
+
+  .post__header {
+    width: 10rem;
+    margin-right: 3rem;
+  }
+
+  .post__category {
+    margin: 2rem 0 0 0;
+  }
+
+  .post__main {
+    width: calc(100% - 10rem - 3rem);
   }
 
   .categoryList {
