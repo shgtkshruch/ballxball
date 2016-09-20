@@ -6,15 +6,16 @@ $color-text: #333;
 $font-size: 1.6rem;
 $font-size-heading: 2.4rem;
 
-$margin-horizontal: 5rem;
+$margin: 5rem;
 $margin-aside-item: 2rem;
 $size-article-date: 10rem;
 
-$width-main: $font-size * 50 + $size-article-date + $margin-horizontal; // 930px
+$width-main: $font-size * 50 + $size-article-date + $margin; // 930px
 $width-aside: 30rem;
-$width-container: $width-main + $margin-horizontal * 2 + $width-aside;
-
-$screen-sm: 930px;
+$width-container: $width-main + $margin* 2 + $width-aside;
 
 $size-aside-icon: 30px;
 $diff-aside-icon: 2px;
+
+$screen-sm: 930px;
+

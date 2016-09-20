@@ -1,7 +1,10 @@
 .logo {
-  margin: 2rem 0 3rem;
+  margin: $margin / 2 0;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
+  @media (min-width: $screen-sm) {
+    margin: $margin 0;
+  }
   &__link {
     pointer-events: none;
     body:not(.opening) &,

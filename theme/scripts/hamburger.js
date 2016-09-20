@@ -4,10 +4,10 @@
   'use strict';
 
   var $hamburger = $('#js-hamburger');
-  var $nav = $('#js-nav');
+  var $gnav = $('#js-gnav');
 
   $hamburger.click(function (e) {
     $(this).toggleClass('is-active');
-    $nav.addClass('is-open').slideToggle();
+    $gnav.addClass('is-open').slideToggle();
   });
 })();

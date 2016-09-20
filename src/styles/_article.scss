@@ -40,12 +40,12 @@
     margin-bottom: 2rem;
     @media (min-width: $screen-sm) {
       width: $size-article-date;
-      margin-right: $margin-horizontal;
+      margin-right: $margin;
     }
   }
   &__main {
     @media (min-width: $screen-sm) {
-      width: calc(100% - #{$size-article-date} - #{$margin-horizontal});
+      width: calc(100% - #{$size-article-date} - #{$margin});
     }
   }
   &__title {

@@ -137,7 +137,7 @@
 
     $('.header').addClass('header--animationEnd');
 
-    $('.header__bottom').addClass('header__bottom--slideUp');
+    $('#js-gnav').addClass('gnav--slideUp');
 
     $('.aside__item').addClass('aside__item--slideUp');
 
