@@ -746,6 +746,7 @@ body:not(.opening) .logo__svg {
     content: '';
     -webkit-transform: skew(-30deg);
     transform: skew(-30deg);
+    border-radius: 3px;
     background-color: #0f2c70;
   }
 
