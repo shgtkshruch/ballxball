@@ -669,18 +669,21 @@ body:not(.opening) .logo__svg {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: center;
     margin: 0 auto;
+    -webkit-box-pack: center;
+    justify-content: center;
   }
 
   .l-main {
-    width: calc(100% - 5rem - 30rem);
-    margin-right: 5rem;
-    padding-right: 5rem;
-    border-right: 1px solid #0f2c70;
+    width: 95rem;
   }
 
   .l-aside {
-    width: 30rem;
+    width: calc(30rem + 5rem);
+    margin-left: 5rem;
+    padding-left: 5rem;
+    border-left: 1px solid #0f2c70;
   }
 
   .l-footer {

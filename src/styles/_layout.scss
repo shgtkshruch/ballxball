@@ -4,6 +4,7 @@
     max-width: $width-container;
     @media (min-width: $screen-sm) {
       display: flex;
+      justify-content: center;
       margin: 0 auto;
     }
   }
@@ -11,15 +12,15 @@
   }
   &-main {
     @media (min-width: $screen-sm) {
-      width: calc(100% - 5rem - #{$width-aside});
-      margin-right: 5rem;
-      padding-right: 5rem;
-      border-right: 1px solid $color-blue;
+      width: $width-main;
     }
   }
   &-aside {
     @media (min-width: $screen-sm) {
-      width: $width-aside;
+      width: calc(#{$width-aside} + #{$margin});
+      margin-left: 5rem;
+      padding-left: 5rem;
+      border-left: 1px solid $color-blue;
     }
   }
   &-footer {
