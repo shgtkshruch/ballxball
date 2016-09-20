@@ -32,7 +32,7 @@ ol {
 }
 
 .l-container {
-  max-width: 135rem;
+  max-width: 127rem;
   padding: 0 2rem;
 }
 
@@ -676,7 +676,7 @@ body:not(.opening) .logo__svg {
   }
 
   .l-main {
-    width: 95rem;
+    width: 87rem;
   }
 
   .l-aside {
@@ -687,7 +687,7 @@ body:not(.opening) .logo__svg {
   }
 
   .l-footer {
-    max-width: 135rem;
+    max-width: 127rem;
     margin-right: auto;
     margin-left: auto;
   }
@@ -700,7 +700,7 @@ body:not(.opening) .logo__svg {
   body:not(.opening) .header,
   .header--animationEnd {
     display: block;
-    max-width: 135rem;
+    max-width: 127rem;
     margin-right: auto;
     margin-left: auto;
     padding: 0 2rem;
