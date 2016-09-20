@@ -15,8 +15,6 @@
 
     var _s = Snap("#logo");
 
-    var _title = Snap.parse('<title>ballxball</title');
-    _s.append(_title);
     _s.select('desc').remove();
 
     var _circle = _s.circle(_svgWidth / 2 - _circleR, _svgHeight / 2, _circleR).attr({ fill: colorPink, id: 'circlePink' });
@@ -43,8 +41,6 @@
 
   var s = Snap("#logo").attr({ width: svgWidth, height: svgHeight });
 
-  var title = Snap.parse('<title>ballxball</title');
-  s.append(title);
   s.select('desc').remove();
 
   var circle1 = s.circle(svgWidth / 2, circleR * -1, circleR).attr({ fill: colorPink, id: 'circlePink' });

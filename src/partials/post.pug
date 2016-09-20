@@ -1,6 +1,7 @@
 article.post
   header.post__header
-    time.post__date.date
+    time.post__date 2016-09-15
+    span.date
       | Sep 15
       br.hidden-sm
       span.date__year 2016
@@ -30,38 +31,38 @@ article.post
         | コマンドを使うには、まず複数のコンテナの設定を書いた
         code docker-compose.yml
         | というファイルを用意します。
-        pre
-          code.language-yaml
-            .
-              # docker-compose.yml
+      pre
+        code.language-yaml
+          .
+            # docker-compose.yml
 
-              version: '2'
-              services:
-                db:
-                  image: mysql:latest
-                  volumes:
-                    - "./.data/db:/var/lib/mysql"
-                  restart: always
-                  environment:
-                    MYSQL_ROOT_PASSWORD: wordpress
-                    MYSQL_DATABASE: wordpress
-                    MYSQL_USER: wordpress
-                    MYSQL_PASSWORD: wordpress
+            version: '2'
+            services:
+              db:
+                image: mysql:latest
+                volumes:
+                  - "./.data/db:/var/lib/mysql"
+                restart: always
+                environment:
+                  MYSQL_ROOT_PASSWORD: wordpress
+                  MYSQL_DATABASE: wordpress
+                  MYSQL_USER: wordpress
+                  MYSQL_PASSWORD: wordpress
 
-                wordpress:
-                  depends_on:
-                    - db
-                  image: wordpress:latest
-                  links:
-                    - db
-                  ports:
-                    - "8000:80"
-                  volumes:
-                    - "./theme:/var/www/html/wp-content/themes/ballxball"
-                  restart: always
-                  environment:
-                    WORDPRESS_DB_HOST: db:3306
-                    WORDPRESS_DB_PASSWORD: wordpress
+              wordpress:
+                depends_on:
+                  - db
+                image: wordpress:latest
+                links:
+                  - db
+                ports:
+                  - "8000:80"
+                volumes:
+                  - "./theme:/var/www/html/wp-content/themes/ballxball"
+                restart: always
+                environment:
+                  WORDPRESS_DB_HOST: db:3306
+                  WORDPRESS_DB_PASSWORD: wordpress
       p
         | ファイルを用意できたら、
         code docker-comse.yml

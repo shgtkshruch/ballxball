@@ -13,8 +13,6 @@
 
     const s = Snap("#logo")
 
-    const title = Snap.parse('<title>ballxball</title');
-    s.append(title);
     s.select('desc').remove();
 
     const circle1 = s
@@ -47,8 +45,6 @@
 
   const s = Snap("#logo").attr({width: svgWidth, height: svgHeight});
 
-  const title = Snap.parse('<title>ballxball</title');
-  s.append(title);
   s.select('desc').remove();
 
   const circle1 = s

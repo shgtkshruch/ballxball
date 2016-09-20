@@ -261,6 +261,10 @@ body:not(.opening) .logo__svg {
   margin-bottom: 2rem;
 }
 
+.article__date {
+  display: none;
+}
+
 .article__title {
   margin: 0 0 2rem;
   color: #000;
@@ -365,6 +369,10 @@ body:not(.opening) .logo__svg {
 
 .post__header {
   margin-bottom: 2rem;
+}
+
+.post__date {
+  display: none;
 }
 
 .post__tag {
@@ -760,19 +768,19 @@ body:not(.opening) .logo__svg {
   }
 
   .article {
-    margin-bottom: 7rem;
-    padding-bottom: 7rem;
+    margin-bottom: 7.5rem;
+    padding-bottom: 7.5rem;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
 
   .article__header {
     width: 10rem;
-    margin-right: 7rem;
+    margin-right: 5rem;
   }
 
   .article__main {
-    width: calc(100% - 10rem - 7rem);
+    width: calc(100% - 10rem - 5rem);
   }
 
   .date {

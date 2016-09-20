@@ -14,11 +14,11 @@
     }
   }
   @media (min-width: $screen-sm) {
-    $margin: 7rem;
+    $article-margin: $margin * 1.5;
     $border-width: 5px;
     flex-wrap: nowrap;
-    margin-bottom: $margin;
-    padding-bottom: $margin;
+    margin-bottom: $article-margin;
+    padding-bottom: $article-margin;
   }
   .opening & {
     opacity: 0;
@@ -42,6 +42,9 @@
       width: $size-article-date;
       margin-right: $margin;
     }
+  }
+  &__date {
+    display: none;
   }
   &__main {
     @media (min-width: $screen-sm) {
