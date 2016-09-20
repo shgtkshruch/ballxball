@@ -87,7 +87,7 @@ body:not(.opening) .header {
 .header__hamburger {
   position: absolute;
   z-index: 2;
-  top: 4rem;
+  top: 3.5rem;
   right: 1rem;
 }
 
@@ -102,7 +102,7 @@ body.opening .header__hamburger {
 }
 
 .logo {
-  margin: 3rem 0 5rem;
+  margin: 2rem 0 3rem;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
 }
