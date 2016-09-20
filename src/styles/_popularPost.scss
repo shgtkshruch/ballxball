@@ -3,10 +3,20 @@
   &__item {
     position: relative;
     display: flex;
+    padding-bottom: $margin-aside-item / 2;
+    margin-bottom: $margin-aside-item / 2;
+    border-bottom: 1px dashed $color-blue;
     font-size: 1.4rem;
     line-height: 1.5;
-    &:not(:last-child) {
-      margin-bottom: $margin-aside-item;
+    &:first-child {
+      padding-top: $margin-aside-item / 2;
+      border-top: 1px dashed $color-blue;
+      &::after {
+        top: calc(#{$margin-aside-item} / 2 + #{$diff-aside-icon});
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
     &::before {
       counter-increment: ranking;
