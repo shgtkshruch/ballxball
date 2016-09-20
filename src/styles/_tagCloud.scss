@@ -1,0 +1,22 @@
+.tagCloud {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    margin: 0 .5rem 1rem;
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: $color-blue;
+    border: 1px solid;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    transition: all .2s;
+    &:hover {
+      color: #fff;
+      background-color: $color-pink;
+    }
+  }
+}

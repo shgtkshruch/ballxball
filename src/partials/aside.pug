@@ -1,6 +1,6 @@
 aside.l-aside.aside
   section.aside__item
-    h3.aside__heading category
+    h3.aside__heading Category
     ul.categoryList
       - categories = [];
       - categories[0] = {text: 'Programming', class: 'desktop'};
@@ -10,12 +10,20 @@ aside.l-aside.aside
           a.categoryList__link(href="#")
             i.categoryList__icon(class=`fa fa-${category.class}`)
             span.categoryList__text.hover-line-effect= category.text
+
   section.aside__item
-    h3.aside__heading popular post
+    h3.aside__heading Popular Post
     ol.popularPost
       - var i = 0;
       while i < 5
         li.popularPost__item
           a.popularPost__link.hover-line-effect(href="#") WordPressの開発環境をDockerを使って一瞬で立ち上げる
         - i++
+
+  section.aside__item
+    h3.aside__heading Tag Cloud
+    ul.tagCloud
+      each tag, i in ['HTML', 'CSS', 'JavaSciprt', 'WordPress', 'PHP', 'Docker', 'Web service', 'Node.js', 'gulp', 'VIM', 'Atom']
+        li.tagCloud__item
+          a.tagCloud__link(href="#")= tag
 

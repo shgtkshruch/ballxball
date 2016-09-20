@@ -582,6 +582,36 @@ body:not(.opening) .logo__svg {
   width: calc(100% - 30px - 1rem);
 }
 
+.tagCloud {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.tagCloud__item {
+  margin: 0 .5rem 1rem;
+}
+
+.tagCloud__link {
+  position: relative;
+  display: inline-block;
+  padding: .5rem 1rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  letter-spacing: .1rem;
+  color: #0f2c70;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
+
+.tagCloud__link:hover {
+  color: #fff;
+  background-color: #ff1a84;
+}
+
 .opening {
   overflow-y: hidden;
   height: 100vh;
