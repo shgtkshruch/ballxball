@@ -6,16 +6,16 @@ header.l-header.header
     ul.iconList
       li.iconList__item
         a(href="#")
-          i.iconList__icon.fa.fa-search
-      li.iconList__item
-        a(href="#")
           i.iconList__icon.fa.fa-rss
-
-    .search
-      <gcse:searchbox-only></gcse:searchbox-only>
 
     nav#gnav.gnav
       ul.gnav__container
-        each item in ['ABOUT', 'ARCHIVE', 'SEARCH']
+        each item, i in ['ABOUT', 'ARCHIVE', 'SEARCH']
           li.gnav__item
-            a.gnav__link(href="#")= item
+            if i === 2
+              a.gnav__link.search(href="#")= item
+              .search__bg
+              form.search__form
+                input.search__input(type="text" placeholder="keywrods")
+            else
+              a.gnav__link(href="#")= item

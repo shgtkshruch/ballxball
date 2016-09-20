@@ -1,19 +1,19 @@
 (() => {
   'use strict';
 
-  const $searchIcon = $('.iconList__icon.fa-search');
   const $search = $('.search');
+  const $searchFrom = $('.search__form');
+  const $searchInput = $('.search__input');
+  const $searchBg = $('.search__bg');
   const duration = 200;
 
-  $searchIcon.click(function(e) {
+  $search.click(function(e) {
     e.preventDefault();
 
-    if ($(this).hasClass('fa-search')) {
-      $(this).removeClass('fa-search').addClass('fa-close');
-      $search.slideDown(duration);
-    } else {
-      $(this).removeClass('fa-close').addClass('fa-search');
-      $search.slideUp(duration);
-    }
+    $(this).fadeOut(duration, () => {
+      $searchFrom.fadeIn(duration);
+      $searchBg.fadeIn(duration);
+      $searchInput.focus();
+    });
   });
 })();
