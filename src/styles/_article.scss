@@ -4,12 +4,14 @@
   flex-wrap: wrap;
   position: relative;
   margin-bottom: $margin;
-  padding-bottom: $margin;
+  padding-bottom: $margin + 2rem;
   font-size: $font-size;
   border-bottom: 1px solid $color-blue;
-  &:last-child {
-    margin-bottom: 0;
-    border-bottom: none;
+  @media (min-width: $screen-sm) {
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
   }
   @media (min-width: $screen-sm) {
     $margin: 7rem;
