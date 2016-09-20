@@ -3,16 +3,12 @@ aside.l-aside.aside
     h3.aside__heading category
     ul.categoryList
       - categories = [];
-      - categories[0] = {text: 'HTML', class: 'devicon-html5-plain'};
-      - categories[1] = {text: 'CSS', class: 'devicon-css3-plain'};
-      - categories[2] = {text: 'JavaScript', class: 'devicon-javascript-plain'};
-      - categories[3] = {text: 'WordPress', class: 'devicon-wordpress-plain'};
-      - categories[4] = {text: 'Web Searvice', class: 'fa fa-desktop'};
-      - categories[5] = {text: 'Book', class: 'fa fa-book'};
+      - categories[0] = {text: 'Programming', class: 'desktop'};
+      - categories[1] = {text: 'Book', class: 'book'};
       each category, i in categories
         li.categoryList__item
           a.categoryList__link(href="#")
-            i.categoryList__icon(class=`${category.class}`)
+            i.categoryList__icon(class=`fa fa-${category.class}`)
             span.categoryList__text.hover-line-effect= category.text
   section.aside__item
     h3.aside__heading popular post
