@@ -2,17 +2,18 @@ header.l-header.header
   h1.logo
     a.logo__link(href="/")
       svg#logo.logo__svg
-    nav#js-gnav.gnav
-      ul.gnav__container
-        each item, i in ['ABOUT', 'ARCHIVE', 'SEARCH']
-          li.gnav__item
-            if i === 2
-              a.gnav__link.search(href="#")= item
-              .search__bg
-              form.search__form
-                input.search__input(type="text" placeholder="keywrods")
-            else
-              a.gnav__link(href="#")= item
+
+  nav#js-gnav.gnav
+    ul.gnav__container
+      each item, i in ['ABOUT', 'ARCHIVE', 'SEARCH']
+        li.gnav__item
+          if i === 2
+            a.gnav__link.search(href="#")= item
+            .search__bg
+            form.search__form
+              input.search__input(type="text" placeholder="keywrods")
+          else
+            a.gnav__link(href="#")= item
 
   .header__hamburger
     button#js-hamburger.hamburger.hamburger--squeeze(type="button")

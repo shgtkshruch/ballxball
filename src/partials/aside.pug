@@ -27,3 +27,12 @@ aside.l-aside.aside
         li.tagCloud__item
           a.tagCloud__link(href="#")= tag
 
+  section.aside__item
+    h3.aside__heading Follow Me
+    ul.sns
+      each sns, i in ['rss', 'twitter']
+        li.sns__item
+          a.sns__link(href="#")
+            span.sns__text= sns
+            i.sns__icon.fa(class=`fa-${sns}`)
+

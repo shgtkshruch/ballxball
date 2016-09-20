@@ -609,6 +609,47 @@ body:not(.opening) .logo__svg {
   background-color: #ff1a84;
 }
 
+.sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sns__text {
+  display: none;
+}
+
+.sns__item:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.sns__icon {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #0f2c70;
+  font-size: 2.5rem;
+  line-height: 60px;
+}
+
+.sns__icon::after {
+  position: absolute;
+  z-index: -1;
+  top: 3px;
+  left: 3px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  border-radius: 50%;
+  background-color: #ff1a84;
+}
+
 .opening {
   overflow-y: hidden;
   height: 100vh;
