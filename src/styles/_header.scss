@@ -1,8 +1,8 @@
 .header {
-  padding: 0 2rem;
   body:not(.opening) & {
     display: flex;
     justify-content: flex-start;
+    padding: 0 2rem;
   }
   @media (min-width: $screen-sm) {
     text-align: center;

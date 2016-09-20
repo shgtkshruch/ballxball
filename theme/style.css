@@ -36,15 +36,12 @@ ol {
   padding: 0 2rem;
 }
 
-.header {
-  padding: 0 2rem;
-}
-
 body:not(.opening) .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: start;
+  padding: 0 2rem;
   -webkit-box-pack: start;
   justify-content: flex-start;
 }
