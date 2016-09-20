@@ -582,6 +582,11 @@ body:not(.opening) .logo__svg {
   width: calc(100% - 30px - 1rem);
 }
 
+.opening {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
 .hidden-sm {
   display: none;
 }

@@ -3,11 +3,11 @@
 (function () {
   'use strict';
 
-  var body = document.querySelector('body');
+  var $body = $('body');
   var colorPink = '#ff1a84';
   var colorBlue = '#0f2c70';
 
-  if (!body.classList.contains('opening')) {
+  if (!$body.hasClass('opening')) {
     var _circleR = 40;
     var ds = 0.05;
     var _svgWidth = _circleR * 4 * (1 + ds);
@@ -130,6 +130,7 @@
   }
 
   function slideUp() {
+
     $('.article').each(function (i, article) {
       return $(article).addClass('article--slideUp');
     });
@@ -139,6 +140,10 @@
     $('.header__bottom').addClass('header__bottom--slideUp');
 
     $('.aside__item').addClass('aside__item--slideUp');
+
+    setTimeout(function () {
+      $body.removeClass('opening');
+    }, 150 * 5);
 
     animation();
   }

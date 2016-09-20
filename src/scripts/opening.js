@@ -1,11 +1,11 @@
 (() => {
   'use strict';
 
-  const body = document.querySelector('body');
+  const $body = $('body');
   const colorPink = '#ff1a84';
   const colorBlue = '#0f2c70';
 
-  if (!body.classList.contains('opening')) {
+  if (!$body.hasClass('opening')) {
     const circleR = 40;
     const ds = 0.05;
     const svgWidth = circleR * 4 * (1 + ds);
@@ -140,6 +140,7 @@
   }
 
   function slideUp() {
+
     $('.article').each((i, article) => $(article).addClass('article--slideUp'));
 
     $('.header').addClass('header--animationEnd');
@@ -147,6 +148,10 @@
     $('.header__bottom').addClass('header__bottom--slideUp');
 
     $('.aside__item').addClass('aside__item--slideUp');
+
+    setTimeout(() => {
+      $body.removeClass('opening');
+    }, 150 * 5);
 
     animation();
   }
