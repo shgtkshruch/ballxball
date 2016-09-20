@@ -3,6 +3,13 @@
     margin-bottom: $margin;
     padding-bottom: $margin;
     border-bottom: 1px solid $color-blue;
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+      @media (min-width: $screen-sm) {
+        border-bottom: 1px solid $color-blue;
+      }
+    }
     .opening & {
       opacity: 0;
       transform: translateY(100vh);

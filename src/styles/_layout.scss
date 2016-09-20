@@ -25,6 +25,8 @@
   &-footer {
     @media (min-width: $screen-sm) {
       max-width: $width-container;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 }
