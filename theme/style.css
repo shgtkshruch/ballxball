@@ -433,7 +433,9 @@ body:not(.opening) .logo__svg {
 }
 
 .aside__item {
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #0f2c70;
 }
 
 .opening .aside__item {
@@ -484,6 +486,7 @@ body:not(.opening) .logo__svg {
 .aside__heading {
   margin: 0 0 2rem;
   font-size: 2.4rem;
+  font-weight: 100;
   line-height: 1.4;
 }
 

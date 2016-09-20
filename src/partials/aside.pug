@@ -12,7 +12,7 @@ aside.l-aside.aside
             span.categoryList__text.hover-line-effect= category.text
 
   section.aside__item
-    h3.aside__heading Popular Post
+    h3.aside__heading Popular
     ol.popularPost
       - var i = 0;
       while i < 5
@@ -21,14 +21,14 @@ aside.l-aside.aside
         - i++
 
   section.aside__item
-    h3.aside__heading Tag Cloud
+    h3.aside__heading Tag
     ul.tagCloud
       each tag, i in ['HTML', 'CSS', 'JavaSciprt', 'WordPress', 'PHP', 'Docker', 'Web service', 'Node.js', 'gulp', 'VIM', 'Atom']
         li.tagCloud__item
           a.tagCloud__link(href="#")= tag
 
   section.aside__item
-    h3.aside__heading Follow Me
+    h3.aside__heading Follow
     ul.sns
       each sns, i in ['rss', 'twitter']
         li.sns__item

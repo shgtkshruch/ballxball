@@ -1,6 +1,8 @@
 .aside {
   &__item {
-    margin-bottom: 7rem;
+    margin-bottom: $margin;
+    padding-bottom: $margin;
+    border-bottom: 1px solid $color-blue;
     .opening & {
       opacity: 0;
       transform: translateY(100vh);
@@ -21,6 +23,7 @@
   &__heading {
     margin: 0 0 2rem;
     font-size: $font-size-heading;
+    font-weight: 100;
     line-height: 1.4;
   }
 }
