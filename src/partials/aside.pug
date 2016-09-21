@@ -1,16 +1,16 @@
 aside.l-aside.aside
   section.aside__item
     h3.aside__heading Category
-    ul.categoryList
+    ul.category
       - categories = [];
       - categories[0] = {text: 'Programming', class: 'desktop', num: 5};
       - categories[1] = {text: 'Book', class: 'book', num: 7};
       each category, i in categories
-        li.categoryList__item
-          a.categoryList__link(href="#")
-            i.categoryList__icon(class=`fa fa-${category.class}`)
-            span.categoryList__text.hover-line-effect= category.text
-            span.categoryList__num= `(${category.num})`
+        li.category__item
+          a.category__link(href="#")
+            i.category__icon(class=`fa fa-${category.class}`)
+            span.category__text.hover-line-effect= category.text
+            span.category__num= `(${category.num})`
 
   section.aside__item
     h3.aside__heading Popular
