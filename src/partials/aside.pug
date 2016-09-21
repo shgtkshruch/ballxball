@@ -1,6 +1,7 @@
 aside.l-aside.aside
   section.aside__item
-    h3.aside__heading Category
+    h3.aside__heading
+      span.aside__headingInner Category
     ul.category
       - categories = [];
       - categories[0] = {text: 'Programming', class: 'desktop', num: 5};
@@ -13,7 +14,8 @@ aside.l-aside.aside
             span.category__num= `(${category.num})`
 
   section.aside__item
-    h3.aside__heading Popular
+    h3.aside__heading
+      span.aside__headingInner Popular
     ol.popularPost
       - var i = 0;
       while i < 5
@@ -23,14 +25,16 @@ aside.l-aside.aside
         - i++
 
   section.aside__item
-    h3.aside__heading Tag
+    h3.aside__heading
+      span.aside__headingInner Tag
     ul.tagCloud
       each tag, i in ['HTML', 'CSS', 'JavaSciprt', 'WordPress', 'PHP', 'Docker', 'Web service', 'Node.js', 'gulp', 'VIM', 'Atom']
         li.tagCloud__item
           a.tagCloud__link(href="#")= tag
 
   section.aside__item
-    h3.aside__heading Follow
+    h3.aside__heading
+      span.aside__headingInner Follow
     ul.sns
       each sns, i in ['rss', 'twitter']
         li.sns__item

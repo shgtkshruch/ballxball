@@ -1,15 +1,6 @@
 .aside {
   &__item {
     margin-bottom: $margin;
-    padding-bottom: $margin;
-    border-bottom: 1px solid $color-blue;
-    &:last-child {
-      margin-bottom: 0;
-      border-bottom: none;
-      @media (min-width: $screen-sm) {
-        border-bottom: 1px solid $color-blue;
-      }
-    }
     .opening & {
       opacity: 0;
       transform: translateY(100vh);
@@ -28,9 +19,33 @@
     }
   }
   &__heading {
+    position: relative;
     margin: 0 0 2rem;
     font-size: $font-size-heading;
     font-weight: 100;
     line-height: 1.4;
+    text-align: center;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-blue;
+      z-index: -1;
+    }
+    &::after {
+      transform: translateY(-2px);
+    }
+    &::before {
+      transform: translateY(2px);
+    }
+  }
+  &__headingInner {
+    padding: 0 2rem;
+    background-color: #fff;
+    z-index: 1;
   }
 }

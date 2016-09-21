@@ -19,10 +19,6 @@
       padding-bottom: $margin-aside-item;
       margin-bottom: $margin-aside-item;
       border-bottom: 1px dashed $color-blue;
-      &:first-child {
-        padding-top: $margin-aside-item;
-        border-top: 1px dashed $color-blue;
-      }
       &:last-child {
         margin-bottom: 0;
       }
