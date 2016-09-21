@@ -36,11 +36,11 @@
       background-color: $color-blue;
       z-index: -1;
     }
-    &::after {
-      transform: translateY(-2px);
-    }
     &::before {
       transform: translateY(2px);
+    }
+    &::after {
+      transform: translateY(-2px);
     }
   }
   &__headingInner {

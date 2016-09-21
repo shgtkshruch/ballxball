@@ -455,14 +455,14 @@ body:not(.opening) .logo__svg {
   background-color: #0f2c70;
 }
 
-.aside__heading::after {
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
-}
-
 .aside__heading::before {
   -webkit-transform: translateY(2px);
   transform: translateY(2px);
+}
+
+.aside__heading::after {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .aside__headingInner {
