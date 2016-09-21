@@ -531,11 +531,14 @@ body:not(.opening) .logo__svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px dashed #0f2c70;
   font-size: 1.4rem;
   line-height: 1.5;
+  -webkit-box-align: center;
+  align-items: center;
 }
 
 .popularPost__item:first-child {
@@ -543,21 +546,20 @@ body:not(.opening) .logo__svg {
   border-top: 1px dashed #0f2c70;
 }
 
-.popularPost__item:first-child::after {
-  top: calc(2rem + 2px);
-}
-
 .popularPost__item:last-child {
   margin-bottom: 0;
 }
 
-.popularPost__item::before {
+.popularPost__link {
+  width: calc(100% - 30px - 1rem);
+}
+
+.popularPost__num {
+  position: relative;
   display: inline-block;
   width: 30px;
   height: 30px;
   margin-right: 1rem;
-  content: counter(ranking);
-  counter-increment: ranking;
   text-align: center;
   color: #fff;
   border-radius: 50%;
@@ -565,20 +567,21 @@ body:not(.opening) .logo__svg {
   line-height: 30px;
 }
 
-.popularPost__item::after {
+.popularPost__num::before {
+  content: counter(ranking);
+  counter-increment: ranking;
+}
+
+.popularPost__num::after {
   position: absolute;
   z-index: -1;
   top: 2px;
   left: 2px;
-  width: 30px;
-  height: 30px;
+  width: 100%;
+  height: 100%;
   content: '';
   border-radius: 50%;
   background-color: #ff1a84;
-}
-
-.popularPost__link {
-  width: calc(100% - 30px - 1rem);
 }
 
 .tagCloud {
@@ -860,6 +863,9 @@ body:not(.opening) .logo__svg {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
   }
 
   .category__text {

@@ -3,6 +3,7 @@
   &__item {
     position: relative;
     display: flex;
+    align-items: center;
     padding-bottom: $margin-aside-item;
     margin-bottom: $margin-aside-item;
     border-bottom: 1px dashed $color-blue;
@@ -11,39 +12,39 @@
     &:first-child {
       padding-top: $margin-aside-item;
       border-top: 1px dashed $color-blue;
-      &::after {
-        top: calc(#{$margin-aside-item} + #{$diff-aside-icon});
-      }
     }
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  &__link {
+    width: calc(100% - #{$size-aside-icon} - 1rem);
+  }
+  &__num {
+    position: relative;
+    display: inline-block;
+    width: $size-aside-icon;
+    height: $size-aside-icon;
+    line-height: $size-aside-icon;
+    background-color: $color-blue;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    margin-right: 1rem;
     &::before {
       counter-increment: ranking;
       content: counter(ranking);
-      display: inline-block;
-      width: $size-aside-icon;
-      height: $size-aside-icon;
-      line-height: $size-aside-icon;
-      background-color: $color-blue;
-      border-radius: 50%;
-      color: #fff;
-      text-align: center;
-      margin-right: 1rem;
     }
     &::after {
       content: '';
       position: absolute;
       top: $diff-aside-icon;
       left: $diff-aside-icon;
-      width: $size-aside-icon;
-      height: $size-aside-icon;
+      width: 100%;
+      height: 100%;
       background-color: $color-pink;
       border-radius: 50%;
       z-index: -1;
     }
-  }
-  &__link {
-    width: calc(100% - #{$size-aside-icon} - 1rem);
   }
 }
