@@ -8,7 +8,6 @@
 .hover-line-effect {
   @media (min-width: $screen-sm) {
     position: relative;
-    padding-bottom: .5rem;
     &::after {
       content: '';
       position: absolute;
