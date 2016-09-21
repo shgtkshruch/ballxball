@@ -2,17 +2,15 @@
   'use strict';
 
   const $search = $('.search');
-  const $searchFrom = $('.search__form');
+  const $searchLink = $('.gnav__link--search');
   const $searchInput = $('.search__input');
-  const $searchBg = $('.search__bg');
   const duration = 200;
 
-  $search.click(function(e) {
+  $searchLink.click(function(e) {
     e.preventDefault();
 
     $(this).fadeOut(duration, () => {
-      $searchFrom.fadeIn(duration);
-      $searchBg.fadeIn(duration);
+      $search.fadeIn(duration);
       $searchInput.focus();
     });
   });

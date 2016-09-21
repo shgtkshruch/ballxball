@@ -1,28 +1,48 @@
 .search {
-  position: relative;
+  display: none;
+  height: 100%;
   &__form {
-    display: none;
+    display: flex;
     height: 100%;
   }
   &__input {
-    width: 100%;
+    width: 80%;
     height: 100%;
     color: $color-blue;
-    outline: none;
     font-size: 1.8rem;
     text-align: center;
+    outline: none;
+  }
+  &__btn {
+    width: 20%;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+  }
+  &__bgs {
+    display: flex;
   }
   &__bg {
-    $border-width: 3px;
-    display: none;
+    $border-width: 2px;
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: calc(100% - #{$border-width});
-    height: calc(100% - #{$border-width});
-    background-color: #fff;
-    transform: translate(-50%, -50%) skew(-30deg);
+    height: calc(100% - #{$border-width} * 2);
+    transform: translateY(-50%) skew(-30deg);
     z-index: -1;
+    &--white {
+      left: $border-width;
+      width: 80%;
+      background-color: #fff;
+    }
+    &--blue {
+      right: 0;
+      width: 20%;
+      transition: background-color .3s;
+      background-color: $color-blue;
+      .search:hover & {
+        background-color: $color-pink;
+      }
+    }
   }
 }
 

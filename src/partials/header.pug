@@ -9,10 +9,14 @@ header.l-header.header
       each item, i in ['ABOUT', 'ARCHIVE', 'SEARCH']
         li.gnav__item
           if i === 2
-            a.gnav__link.search(href="#")= item
-            .search__bg
-            form.search__form
-              input.search__input(type="text" placeholder="keywrods")
+            a.gnav__link.gnav__link--search(href="#")= item
+            .search
+              .search__bgs
+                span.search__bg.search__bg--white
+                span.search__bg.search__bg--blue
+              form.search__form
+                input.search__input(type="text" placeholder="keywrods")
+                input.search__btn(type="submit" value="検索")
           else
             a.gnav__link(href="#")= item
 

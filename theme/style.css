@@ -141,16 +141,19 @@ body:not(.opening) .logo__svg {
 }
 
 .search {
-  position: relative;
-}
-
-.search__form {
   display: none;
   height: 100%;
 }
 
+.search__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
 .search__input {
-  width: 100%;
+  width: 80%;
   height: 100%;
   text-align: center;
   color: #0f2c70;
@@ -158,17 +161,44 @@ body:not(.opening) .logo__svg {
   font-size: 1.8rem;
 }
 
+.search__btn {
+  width: 20%;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+}
+
+.search__bgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .search__bg {
   position: absolute;
   z-index: -1;
   top: 50%;
-  left: 50%;
-  display: none;
-  width: calc(100% - 3px);
-  height: calc(100% - 3px);
-  -webkit-transform: translate(-50%, -50%) skew(-30deg);
-  transform: translate(-50%, -50%) skew(-30deg);
+  height: calc(100% - 2px * 2);
+  -webkit-transform: translateY(-50%) skew(-30deg);
+  transform: translateY(-50%) skew(-30deg);
+}
+
+.search__bg--white {
+  left: 2px;
+  width: 80%;
   background-color: #fff;
+}
+
+.search__bg--blue {
+  right: 0;
+  width: 20%;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  background-color: #0f2c70;
+}
+
+.search:hover .search__bg--blue {
+  background-color: #ff1a84;
 }
 
 .article {
@@ -756,7 +786,7 @@ body:not(.opening) .logo__svg {
 
   .gnav__item::before {
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     top: 0;
     left: 0;
     width: 100%;
