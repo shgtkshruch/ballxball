@@ -531,20 +531,20 @@ body:not(.opening) .logo__svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   border-bottom: 1px dashed #0f2c70;
   font-size: 1.4rem;
   line-height: 1.5;
 }
 
 .popularPost__item:first-child {
-  padding-top: 1rem;
+  padding-top: 2rem;
   border-top: 1px dashed #0f2c70;
 }
 
 .popularPost__item:first-child::after {
-  top: calc(2rem / 2 + 2px);
+  top: calc(2rem + 2px);
 }
 
 .popularPost__item:last-child {
@@ -831,14 +831,14 @@ body:not(.opening) .logo__svg {
   }
 
   .category__item {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     text-align: start;
     border-bottom: 1px dashed #0f2c70;
   }
 
   .category__item:first-child {
-    padding-top: 1rem;
+    padding-top: 2rem;
     border-top: 1px dashed #0f2c70;
   }
 

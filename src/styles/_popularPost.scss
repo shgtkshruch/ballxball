@@ -3,16 +3,16 @@
   &__item {
     position: relative;
     display: flex;
-    padding-bottom: $margin-aside-item / 2;
-    margin-bottom: $margin-aside-item / 2;
+    padding-bottom: $margin-aside-item;
+    margin-bottom: $margin-aside-item;
     border-bottom: 1px dashed $color-blue;
     font-size: 1.4rem;
     line-height: 1.5;
     &:first-child {
-      padding-top: $margin-aside-item / 2;
+      padding-top: $margin-aside-item;
       border-top: 1px dashed $color-blue;
       &::after {
-        top: calc(#{$margin-aside-item} / 2 + #{$diff-aside-icon});
+        top: calc(#{$margin-aside-item} + #{$diff-aside-icon});
       }
     }
     &:last-child {
