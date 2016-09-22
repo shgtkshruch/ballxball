@@ -182,36 +182,11 @@ body:not(.opening) .logo__svg {
 
 .article {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
   font-size: 1.6rem;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
-.article:first-child {
+.article:first-child .article__inner {
   padding-top: 0;
-}
-
-.article:hover .date {
-  background-color: #ff1a84;
-}
-
-.article:hover .date::after {
-  background-color: #0f2c70;
-}
-
-.article:hover .article__title {
-  color: #ff1a84;
-}
-
-.article:hover .article__lineSvg {
-  -webkit-transform: translate3d(-66.6%, 0, 0);
-  transform: translate3d(-66.6%, 0, 0);
-  stroke: #ff1a84;
 }
 
 .opening .article {
@@ -284,28 +259,45 @@ body:not(.opening) .logo__svg {
   opacity: 1 !important;
 }
 
-.article__header {
-  margin-bottom: 2rem;
+.article__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.article__date {
+.article__dateTime {
   display: none;
 }
 
+.article__date {
+  margin-bottom: 2rem;
+}
+
 .article__title {
+  position: relative;
   margin: 0 0 2rem;
   color: #000;
   font-size: 2.4rem;
 }
 
-.article__body {
-  margin: 0;
+.article__title::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  content: '';
+  -webkit-transition: width .3s;
+  transition: width .3s;
+  background-color: #ff1a84;
 }
 
-.article__footer {
-  position: absolute;
-  right: -.5rem;
-  bottom: 0;
+.article__body {
+  margin: 0;
 }
 
 .article__line {
@@ -809,17 +801,34 @@ body:not(.opening) .logo__svg {
     color: #fff;
   }
 
-  .article:last-child {
-    border-bottom: none;
+  .article:hover .date {
+    background-color: #ff1a84;
   }
 
-  .article {
+  .article:hover .date::after {
+    background-color: #0f2c70;
+  }
+
+  .article:hover .article__title {
+    color: #ff1a84;
+  }
+
+  .article:hover .article__title::after {
+    width: 100%;
+  }
+
+  .article:hover .article__lineSvg {
+    -webkit-transform: translate3d(-66.6%, 0, 0);
+    transform: translate3d(-66.6%, 0, 0);
+    stroke: #ff1a84;
+  }
+
+  .article__inner {
+    padding-top: 7.5rem;
     padding-bottom: 7.5rem;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
   }
 
-  .article__header {
+  .article__date {
     width: 10rem;
     margin-right: 5rem;
   }
@@ -925,7 +934,7 @@ body:not(.opening) .logo__svg {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 1px;
     content: '';
     -webkit-transition: width .3s;
     transition: width .3s;
