@@ -1,8 +1,8 @@
-.search {
+.searchForm {
   display: none;
   height: 100%;
   &:hover {
-    .search__input {
+    .searchForm__input {
       color: $color-pink;
     }
   }

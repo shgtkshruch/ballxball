@@ -1,0 +1,10 @@
+.guide {
+  max-width: $width-container;
+  padding: 0 2rem;
+  margin: $margin * -0.5 auto $margin * 1.5;
+  &__text {
+    margin: 0;
+    font-size: $font-size;
+    border-bottom: 1px solid;
+  }
+}

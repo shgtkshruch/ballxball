@@ -3,9 +3,9 @@
 (function () {
   'use strict';
 
-  var $search = $('.search');
+  var $search = $('.searchForm');
   var $searchLink = $('.gnav__link--search');
-  var $searchInput = $('.search__input');
+  var $searchInput = $('.searchForm__input');
   var duration = 200;
 
   $searchLink.click(function (e) {

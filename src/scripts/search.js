@@ -1,9 +1,9 @@
 (() => {
   'use strict';
 
-  const $search = $('.search');
+  const $search = $('.searchForm');
   const $searchLink = $('.gnav__link--search');
-  const $searchInput = $('.search__input');
+  const $searchInput = $('.searchForm__input');
   const duration = 200;
 
   $searchLink.click(function(e) {
