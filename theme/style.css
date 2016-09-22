@@ -37,10 +37,6 @@ ol {
   padding-left: 2rem;
 }
 
-.l-main {
-  margin-bottom: 10rem;
-}
-
 body:not(.opening) .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -777,7 +773,6 @@ body:not(.opening) .logo__svg {
 
   .l-main {
     width: 87rem;
-    margin-bottom: 0;
   }
 
   .l-aside {
