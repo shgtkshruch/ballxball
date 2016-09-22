@@ -33,12 +33,12 @@ gulp.task('wiredep', () => {
 });
 
 gulp.task('html', ['pug', 'sass', 'js'], () => {
-  return gulp.src('dist/index.html')
+  return gulp.src('dist/*.html')
     .pipe($.useref())
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
-    .pipe($.if('*.css', $.uncss({
-      html: ['dist/*.html']
-    })))
+    // .pipe($.if('*.css', $.uncss({
+    //   html: ['dist#<{(|.html']
+    // })))
     .pipe($.if('*.css', $.cleanCss()))
     .pipe($.if('*.js', $.uglify()))
     .pipe(gulp.dest('dist'))
@@ -133,7 +133,7 @@ gulp.task('default', (cb) => {
   runSequence(['pug', 'sass', 'js', 'image'], 'browserSync', 'watch', cb);
 });
 
-gulp.task('build', () => {
+gulp.task('build', (cb) => {
   runSequence('clean:all', ['html', 'image'], 'clean:build', cb);
 });
 
