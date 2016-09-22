@@ -961,8 +961,8 @@ body:not(.opening) .logo__svg {
 
   .l-aside {
     width: calc(30rem + 5rem);
-    margin-left: 5rem;
-    padding-left: 5rem;
+    margin-left: 2rem;
+    padding-left: 2rem;
     border-left: 1px solid #0f2c70;
   }
 
@@ -1080,11 +1080,11 @@ body:not(.opening) .logo__svg {
 
   .article__date {
     width: 10rem;
-    margin-right: 5rem;
+    margin-right: 2rem;
   }
 
   .article__main {
-    width: calc(100% - 10rem - 5rem);
+    width: calc(100% - 10rem - 2rem);
   }
 
   .date {
@@ -1257,5 +1257,20 @@ body:not(.opening) .logo__svg {
 
   .hidden-sm {
     display: block;
+  }
+}
+
+@media (min-width: 1270px) {
+  .l-aside {
+    margin-left: 5rem;
+    padding-left: 5rem;
+  }
+
+  .article__date {
+    margin-right: 5rem;
+  }
+
+  .article__main {
+    width: calc(100% - 10rem - 5rem);
   }
 }

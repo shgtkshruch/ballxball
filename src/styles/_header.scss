@@ -3,7 +3,7 @@
   body:not(.opening) & {
     display: flex;
     justify-content: flex-start;
-    padding: 0 2rem;
+    padding: 0 $padding-page;
   }
   @media (min-width: $screen-sm) {
     text-align: center;
@@ -11,7 +11,7 @@
     body:not(.opening) &,
     &--animationEnd {
       display: block;
-      padding: 0 2rem;
+      padding: 0 $padding-page;
       max-width: $width-container;
       margin-right: auto;
       margin-left: auto;

@@ -1,7 +1,7 @@
 .l {
   &-container {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: $padding-page;
+    padding-left: $padding-page;
     max-width: $width-container;
     @media (min-width: $screen-sm) {
       display: flex;
@@ -19,9 +19,13 @@
   &-aside {
     @media (min-width: $screen-sm) {
       width: calc(#{$width-aside} + #{$margin});
-      margin-left: 5rem;
-      padding-left: 5rem;
+      padding-left: $padding-page;
+      margin-left: $padding-page;
       border-left: 1px solid $color-blue;
+    }
+    @media (min-width: $screen-md) {
+      padding-left: $margin;
+      margin-left: $margin;
     }
   }
   &-footer {
