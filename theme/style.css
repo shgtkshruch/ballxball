@@ -480,8 +480,7 @@ body:not(.opening) .logo__svg {
   line-height: 1.4;
 }
 
-.aside__heading::before,
-.aside__heading::after {
+.aside__heading::before {
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -490,16 +489,6 @@ body:not(.opening) .logo__svg {
   height: 1px;
   content: '';
   background-color: #0f2c70;
-}
-
-.aside__heading::before {
-  -webkit-transform: translateY(2px);
-  transform: translateY(2px);
-}
-
-.aside__heading::after {
-  -webkit-transform: translateY(-2px);
-  transform: translateY(-2px);
 }
 
 .aside__headingInner {
