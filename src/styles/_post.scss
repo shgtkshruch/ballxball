@@ -14,7 +14,7 @@
     display: none;
   }
   &__tag {
-    margin-top: 2rem;
+    margin-top: $margin / 2;
   }
   &__main {
     max-width: 100%;
@@ -26,6 +26,9 @@
     margin: 0 0 3rem;
     font-size: $font-size-heading;
     line-height: 1.4;
+    padding: $margin / 2 0;
+    border-top: 1px solid $color-blue;
+    border-bottom: 1px solid $color-blue;
   }
   &__body {
     font-size: $font-size;
