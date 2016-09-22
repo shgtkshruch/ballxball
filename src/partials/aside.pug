@@ -10,7 +10,7 @@ aside.l-aside.aside
         li.category__item
           a.category__link(href="#")
             i.category__icon(class=`fa fa-${category.class}`)
-            span.category__text.hover-line-effect= category.text
+            span.category__text= category.text
             span.category__num= `(${category.num})`
 
   section.aside__item
@@ -20,8 +20,9 @@ aside.l-aside.aside
       - var i = 0;
       while i < 5
         li.popularPost__item
-          span.popularPost__num
-          a.popularPost__link.hover-line-effect(href="#") WordPressの開発環境をDockerを使って一瞬で立ち上げる
+          a.popularPost__link(href="#")
+            span.popularPost__num
+            span.popularPost__text WordPressの開発環境をDockerを使って一瞬で立ち上げる
         - i++
 
   section.aside__item

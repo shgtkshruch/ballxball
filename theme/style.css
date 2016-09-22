@@ -531,6 +531,8 @@ body:not(.opening) .logo__svg {
   display: inline-block;
   width: 5rem;
   height: 5rem;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
   text-align: center;
   color: #fff;
   border-radius: 50%;
@@ -547,17 +549,22 @@ body:not(.opening) .logo__svg {
   width: 100%;
   height: 100%;
   content: '';
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
   border-radius: 50%;
   background-color: #ff1a84;
 }
 
 .category__text {
+  position: relative;
   display: block;
   font-size: 1.3rem;
 }
 
 .category__num {
   margin-left: auto;
+  -webkit-transition: color .3s;
+  transition: color .3s;
 }
 
 .popularPost {
@@ -566,17 +573,11 @@ body:not(.opening) .logo__svg {
 
 .popularPost__item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px dashed #0f2c70;
   font-size: 1.4rem;
   line-height: 1.5;
-  -webkit-box-align: center;
-  align-items: center;
 }
 
 .popularPost__item:last-child {
@@ -584,7 +585,29 @@ body:not(.opening) .logo__svg {
 }
 
 .popularPost__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.popularPost__text {
+  position: relative;
   width: calc(100% - 30px - 1rem);
+}
+
+.popularPost__text::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  content: '';
+  -webkit-transition: width .3s;
+  transition: width .3s;
+  background-color: #ff1a84;
 }
 
 .popularPost__num {
@@ -593,6 +616,8 @@ body:not(.opening) .logo__svg {
   width: 30px;
   height: 30px;
   margin-right: 1rem;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
   text-align: center;
   color: #fff;
   border-radius: 50%;
@@ -613,6 +638,8 @@ body:not(.opening) .logo__svg {
   width: 100%;
   height: 100%;
   content: '';
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
   border-radius: 50%;
   background-color: #ff1a84;
 }
@@ -895,6 +922,26 @@ body:not(.opening) .logo__svg {
     margin-bottom: 0;
   }
 
+  .category__link:hover .category__icon {
+    background-color: #ff1a84;
+  }
+
+  .category__link:hover .category__icon::after {
+    background-color: #0f2c70;
+  }
+
+  .category__link:hover .category__text {
+    color: #ff1a84;
+  }
+
+  .category__link:hover .category__text::after {
+    width: 100%;
+  }
+
+  .category__link:hover .category__num {
+    color: #ff1a84;
+  }
+
   .category__icon {
     position: relative;
     display: inline-block;
@@ -919,23 +966,7 @@ body:not(.opening) .logo__svg {
     font-size: 1.6rem;
   }
 
-  .sns__icon:hover {
-    background-color: #ff1a84;
-  }
-
-  .sns__icon:hover::after {
-    background-color: #0f2c70;
-  }
-
-  .hidden-sm {
-    display: block;
-  }
-
-  .hover-line-effect {
-    position: relative;
-  }
-
-  .hover-line-effect::after {
+  .category__text::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -947,11 +978,31 @@ body:not(.opening) .logo__svg {
     background-color: #ff1a84;
   }
 
-  .hover-line-effect:hover {
+  .popularPost__link:hover .popularPost__num {
+    background-color: #ff1a84;
+  }
+
+  .popularPost__link:hover .popularPost__num::after {
+    background-color: #0f2c70;
+  }
+
+  .popularPost__link:hover .popularPost__text {
     color: #ff1a84;
   }
 
-  .hover-line-effect:hover::after {
+  .popularPost__link:hover .popularPost__text::after {
     width: 100%;
+  }
+
+  .sns__icon:hover {
+    background-color: #ff1a84;
+  }
+
+  .sns__icon:hover::after {
+    background-color: #0f2c70;
+  }
+
+  .hidden-sm {
+    display: block;
   }
 }

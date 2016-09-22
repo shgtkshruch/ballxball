@@ -24,6 +24,27 @@
       }
     }
   }
+  &__link {
+    @media (min-width: $screen-sm) {
+      &:hover {
+        .category__icon {
+          background-color: $color-pink;
+          &::after {
+            background-color: $color-blue;
+          }
+        }
+        .category__text {
+          color: $color-pink;
+          &::after {
+            width: 100%;
+          }
+        }
+        .category__num {
+          color: $color-pink;
+        }
+      }
+    }
+  }
   &__icon {
     $size-aside-icon: 5rem;
     font-size: 2rem;
@@ -36,6 +57,7 @@
     border-radius: 50%;
     color: #fff;
     text-align: center;
+    transition: background-color .3s;
     &::after {
       content: '';
       position: absolute;
@@ -46,6 +68,7 @@
       background-color: $color-pink;
       border-radius: 50%;
       z-index: -1;
+      transition: background-color .3s;
     }
     @media (min-width: $screen-sm) {
       $size-aside-icon: 3rem;
@@ -65,14 +88,26 @@
     }
   }
   &__text {
+    position: relative;
     display: block;
     font-size: 1.3rem;
     @media (min-width: $screen-sm) {
       display: inline;
       font-size: $font-size;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $color-pink;
+        transition: width .3s;
+      }
     }
   }
   &__num {
     margin-left: auto;
+    transition: color .3s;
   }
 }

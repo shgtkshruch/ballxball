@@ -2,8 +2,6 @@
   counter-reset: ranking;
   &__item {
     position: relative;
-    display: flex;
-    align-items: center;
     padding-bottom: $margin-aside-item;
     margin-bottom: $margin-aside-item;
     border-bottom: 1px dashed $color-blue;
@@ -14,7 +12,38 @@
     }
   }
   &__link {
+    display: flex;
+    align-items: center;
+    @media (min-width: $screen-sm) {
+      &:hover {
+        .popularPost__num {
+          background-color: $color-pink;
+          &::after {
+            background-color: $color-blue;
+          }
+        }
+        .popularPost__text {
+          color: $color-pink;
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__text {
+    position: relative;
     width: calc(100% - #{$size-aside-icon} - 1rem);
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color-pink;
+      transition: width .3s;
+    }
   }
   &__num {
     position: relative;
@@ -27,6 +56,7 @@
     color: #fff;
     text-align: center;
     margin-right: 1rem;
+    transition: background-color .3s;
     &::before {
       counter-increment: ranking;
       content: counter(ranking);
@@ -41,6 +71,7 @@
       background-color: $color-pink;
       border-radius: 50%;
       z-index: -1;
+      transition: background-color .3s;
     }
   }
 }
