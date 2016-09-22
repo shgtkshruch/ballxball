@@ -1,0 +1,21 @@
+.page {
+  font-size: $font-size;
+  h2 {
+    position: relative;
+    margin: 0 0 $margin;
+    font-size: 4rem;
+    line-height: 1;
+    text-align: center;
+    &::after {
+      $width: 100px;
+      content: '';
+      position: absolute;
+      bottom: $margin * -1/ 2;
+      left: 50%;
+      width: $width;
+      height: 1px;
+      margin-left: $width * - 1 / 2;
+      background-color: $color-blue;
+    }
+  }
+}

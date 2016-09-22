@@ -6,17 +6,21 @@ header.l-header.header
 
   nav#js-gnav.gnav
     ul.gnav__container
-      each item, i in ['ABOUT', 'ARCHIVE', 'SEARCH']
+      - nav = [];
+      - nav[0] = {text: 'about', link: 'about.html'};
+      - nav[1] = {text: 'contact', link: 'contact.html'};
+      - nav[2] = {text: 'search', link: '#'};
+      each n, i in nav
         li.gnav__item
           if i === 2
-            a.gnav__link.gnav__link--search(href="#")= item
+            a.gnav__link.gnav__link--search(href="#")= n.text
             .searchForm
               span.searchForm__bg
               form.searchForm__form(action="search.html")
                 input.searchForm__input(type="search" name="s" placeholder="keywrods")
                 input.searchForm__btn(type="submit" value="検索")
           else
-            a.gnav__link(href="#")= item
+            a.gnav__link(href=`${n.link}`)= n.text
 
   .header__hamburger
     button#js-hamburger.hamburger.hamburger--squeeze(type="button")

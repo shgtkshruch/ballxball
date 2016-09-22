@@ -1,0 +1,51 @@
+.wpcf7 {
+  line-height: 1;
+  margin-top: $margin;
+  $height: 6rem;
+  p {
+    position: relative;
+    margin: 0 0 6rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  label {
+    font-size: 2rem;
+    position: absolute;
+    height: $height;
+    line-height: $height;
+    transition: transform .2s;
+    &.is-active {
+      transform: translateY(-4rem);
+    }
+    > span:first-child {
+      color: $color-pink;
+      padding: 0 1rem;
+    }
+  }
+  &-form-control-wrap {
+    width: 100%;
+    display: inline-block;
+  }
+  &-form-control {
+    width: 100%;
+    height: $height;
+    padding: 1rem;
+    border-bottom: 1px solid $color-blue;
+    font-size: $font-size;
+    outline: none;
+    &:focus {
+      border-bottom-color: $color-pink;
+    }
+  }
+  &-submit {
+    color: #fff;
+    background-color: $color-blue;
+    border: none;
+    transition: background-color .3s;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-pink;
+    }
+  }
+}
