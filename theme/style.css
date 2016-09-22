@@ -1096,12 +1096,12 @@ body:not(.opening) .logo__svg {
 
   .post__header {
     width: 10rem;
-    margin-right: 5rem;
+    margin-right: 2rem;
     text-align: center;
   }
 
   .post__main {
-    width: calc(100% - 10rem - 5rem);
+    width: calc(100% - 10rem - 2rem);
   }
 
   .post__sns {
@@ -1271,6 +1271,14 @@ body:not(.opening) .logo__svg {
   }
 
   .article__main {
+    width: calc(100% - 10rem - 5rem);
+  }
+
+  .post__header {
+    margin-right: 5rem;
+  }
+
+  .post__main {
     width: calc(100% - 10rem - 5rem);
   }
 }
