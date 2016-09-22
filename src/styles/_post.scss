@@ -26,9 +26,9 @@
     margin: 0 0 3rem;
     font-size: $font-size-heading;
     line-height: 1.4;
-    padding: $margin / 2 0;
-    border-top: 1px solid $color-blue;
-    border-bottom: 1px solid $color-blue;
+    padding: $margin / 3 0;
+    border-top: 4px double $color-blue;
+    border-bottom: 4px double $color-blue;
   }
   &__body {
     font-size: $font-size;
