@@ -154,6 +154,10 @@ body:not(.opening) .logo__svg {
   height: 100%;
 }
 
+.search:hover .search__input {
+  color: #ff1a84;
+}
+
 .search__form {
   display: -webkit-box;
   display: -ms-flexbox;

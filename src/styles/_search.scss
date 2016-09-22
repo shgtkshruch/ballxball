@@ -1,6 +1,11 @@
 .search {
   display: none;
   height: 100%;
+  &:hover {
+    .search__input {
+      color: $color-pink;
+    }
+  }
   &__form {
     display: flex;
     height: 100%;
