@@ -457,6 +457,66 @@ body:not(.opening) .logo__svg {
   background-color: #fff;
 }
 
+.wp-pagenavi {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: 1.5rem;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink,
+.wp-pagenavi .page {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 .5rem;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #0f2c70;
+  line-height: 4rem;
+}
+
+.wp-pagenavi .previouspostslink::after,
+.wp-pagenavi .nextpostslink::after,
+.wp-pagenavi .page::after {
+  position: absolute;
+  z-index: -1;
+  top: 2px;
+  left: 2px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  border-radius: 50%;
+  background-color: #ff1a84;
+}
+
+.wp-pagenavi .previouspostslink:hover,
+.wp-pagenavi .nextpostslink:hover,
+.wp-pagenavi .page:hover {
+  background-color: #ff1a84;
+}
+
+.wp-pagenavi .previouspostslink:hover::after,
+.wp-pagenavi .nextpostslink:hover::after,
+.wp-pagenavi .page:hover::after {
+  background-color: #0f2c70;
+}
+
 .footer {
   position: relative;
   padding-top: 2.5rem;
@@ -940,6 +1000,10 @@ body:not(.opening) .logo__svg {
 
   .post__sns {
     padding-bottom: 3rem;
+    border-bottom: 1px solid #0f2c70;
+  }
+
+  .wp-pagenavi {
     border-bottom: 1px solid #0f2c70;
   }
 

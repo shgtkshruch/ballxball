@@ -12,8 +12,8 @@ header.l-header.header
             a.gnav__link.gnav__link--search(href="#")= item
             .searchForm
               span.searchForm__bg
-              form.searchForm__form
-                input.searchForm__input(type="text" placeholder="keywrods")
+              form.searchForm__form(action="search.html")
+                input.searchForm__input(type="search" name="s" placeholder="keywrods")
                 input.searchForm__btn(type="submit" value="検索")
           else
             a.gnav__link(href="#")= item
