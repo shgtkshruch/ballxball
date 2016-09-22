@@ -9,27 +9,8 @@ block body
 
     .l-container
       main.l-main
-        - var i = 0;
-        while i < 10
-          article.article
-            a.article__inner(href="page.html")
-              time.article__dateTime 2016-09-15
-              span.date.article__date
-                | Sep 15
-                br.hidden-sm
-                span.date__year 2016
-              .article__main
-                h2.article__title WordPressの開発環境をDockerを使って一瞬で立ち上げる
-                p.article__body WordPressの勉強をするときにまず最初にしなければならないのが、開発環境の構築。LAMPやVagrantなどを使った方法もありますが、今回はDockerを使った開発環境の構築のやり方を紹介します。
-              .article__line
-                svg.article__lineSvg(width="300%" height="60px" viewBox="0 0 1200 60" preserveAspectRatio="none")
-                  path(d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0")
-          - i++
-
+        include partials/article
         include partials/pager
-
       include partials/aside
-
-
 
     include partials/footer
