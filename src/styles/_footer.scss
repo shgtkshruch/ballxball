@@ -3,9 +3,7 @@
   padding-top: $margin / 2;
   padding-bottom: $margin / 2;
   text-align: center;
-  border-top: 1px solid $color-blue;
   @media (min-width: $screen-sm) {
-    padding-top: 1rem;
     margin-top: $margin * 2;
   }
 }

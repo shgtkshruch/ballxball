@@ -41,10 +41,6 @@ ol {
   margin-bottom: 10rem;
 }
 
-.l-footer {
-  padding: 0 2rem;
-}
-
 body:not(.opening) .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,7 +454,6 @@ body:not(.opening) .logo__svg {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   text-align: center;
-  border-top: 1px solid #0f2c70;
 }
 
 .aside__item {
@@ -776,8 +771,6 @@ body:not(.opening) .logo__svg {
     display: flex;
     -ms-flex-pack: center;
     margin: 0 auto;
-    padding-right: 0;
-    padding-left: 0;
     -webkit-box-pack: center;
     justify-content: center;
   }
@@ -945,7 +938,6 @@ body:not(.opening) .logo__svg {
 
   .footer {
     margin-top: 10rem;
-    padding-top: 1rem;
   }
 
   .category {
