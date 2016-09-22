@@ -14,8 +14,8 @@
     background-color: #fff;
     font-size: 1.2rem;
     letter-spacing: .1rem;
-    transition: all .2s;
     @media (min-width: $screen-sm) {
+      transition: all .3s;
       &::before {
         content: '';
         position: absolute;
@@ -27,11 +27,12 @@
         border-radius: 3px;
         z-index: -1;
         transition: transform .3s;
+        transition-delay: .1s;
       }
       &:hover {
         color: #fff;
         background-color: $color-pink;
-        border: none;
+        border-color: $color-pink;
         &:before {
           transform: rotate(10deg);
         }
