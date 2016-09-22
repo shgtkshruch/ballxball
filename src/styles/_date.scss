@@ -20,7 +20,7 @@
     border-radius: 3px;
     transform: rotate(5deg);
     z-index: -1;
-    transition: background-color .3s;
+    transition: all .3s;
   }
   @media (min-width: $screen-sm) {
     $size: $size-article-date;

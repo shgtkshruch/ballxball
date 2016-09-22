@@ -21,6 +21,9 @@
         background-color: $color-pink;
         &::after {
           background-color: $color-blue;
+          $diff: 15px;
+          top: $diff;
+          left: $diff;
         }
       }
       .article__title {
