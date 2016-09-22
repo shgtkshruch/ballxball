@@ -291,22 +291,11 @@ body:not(.opening) .logo__svg {
 }
 
 .article__title {
-  position: relative;
   margin: 0 0 2rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
   color: #000;
   font-size: 2.4rem;
-}
-
-.article__title::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  content: '';
-  -webkit-transition: width .3s;
-  transition: width .3s;
-  background-color: #ff1a84;
 }
 
 .article__body {
@@ -848,10 +837,6 @@ body:not(.opening) .logo__svg {
 
   .article:hover .article__title {
     color: #ff1a84;
-  }
-
-  .article:hover .article__title::after {
-    width: 100%;
   }
 
   .article:hover .article__lineSvg {
