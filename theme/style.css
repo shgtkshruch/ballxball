@@ -477,8 +477,8 @@ body:not(.opening) .logo__svg {
 .wp-pagenavi .nextpostslink,
 .wp-pagenavi .page {
   position: relative;
-  width: 4rem;
-  height: 4rem;
+  width: 4.5rem;
+  height: 4.5rem;
   margin: 0 .5rem;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
@@ -486,7 +486,7 @@ body:not(.opening) .logo__svg {
   color: #fff;
   border-radius: 50%;
   background-color: #0f2c70;
-  line-height: 4rem;
+  line-height: 4.5rem;
 }
 
 .wp-pagenavi .previouspostslink::after,
