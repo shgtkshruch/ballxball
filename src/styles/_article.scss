@@ -7,6 +7,14 @@
       padding-top: 0;
     }
   }
+  &:last-child {
+    .article__line {
+      display: none;
+      @media (min-width: $screen-sm) {
+        display: block;
+      }
+    }
+  }
   @media (min-width: $screen-sm) {
     &:hover {
       .date {

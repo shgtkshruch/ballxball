@@ -1,10 +1,13 @@
 .l {
   &-container {
-    padding: 0 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
     max-width: $width-container;
     @media (min-width: $screen-sm) {
       display: flex;
       justify-content: center;
+      padding-left: 0;
+      padding-right: 0;
       margin: 0 auto;
     }
   }
@@ -24,6 +27,7 @@
     }
   }
   &-footer {
+    padding: 0 2rem;
     @media (min-width: $screen-sm) {
       max-width: $width-container;
       margin-right: auto;
