@@ -185,12 +185,33 @@ body:not(.opening) .logo__svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 5rem;
-  padding-bottom: 7rem;
-  border-bottom: 1px solid #0f2c70;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   font-size: 1.6rem;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.article:first-child {
+  padding-top: 0;
+}
+
+.article:hover .date {
+  background-color: #ff1a84;
+}
+
+.article:hover .date::after {
+  background-color: #0f2c70;
+}
+
+.article:hover .article__title {
+  color: #ff1a84;
+}
+
+.article:hover .article__lineSvg {
+  -webkit-transform: translate3d(-66.6%, 0, 0);
+  transform: translate3d(-66.6%, 0, 0);
+  stroke: #ff1a84;
 }
 
 .opening .article {
@@ -287,10 +308,32 @@ body:not(.opening) .logo__svg {
   bottom: 0;
 }
 
+.article__line {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  pointer-events: none;
+}
+
+.article__lineSvg {
+  -webkit-transition: -webkit-transform .7s;
+  transition: -webkit-transform .7s;
+  transition: transform .7s;
+  transition: transform .7s, -webkit-transform .7s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+  fill: none;
+  stroke: #0f2c70;
+}
+
 .date {
   position: relative;
   display: inline-block;
   padding: .3rem 1rem;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
   color: #fff;
   border-radius: 3px;
   background-color: #0f2c70;
@@ -307,6 +350,8 @@ body:not(.opening) .logo__svg {
   width: 100%;
   height: 100%;
   content: '';
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
   -webkit-transform: rotate(5deg);
   transform: rotate(5deg);
   border-radius: 3px;
@@ -765,12 +810,10 @@ body:not(.opening) .logo__svg {
   }
 
   .article:last-child {
-    margin-bottom: 0;
     border-bottom: none;
   }
 
   .article {
-    margin-bottom: 7.5rem;
     padding-bottom: 7.5rem;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
