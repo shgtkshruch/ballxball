@@ -31,7 +31,7 @@
     border-radius: 50%;
     text-align: center;
     &::after {
-      $diff: -3px;
+      $diff: 3px;
       top: $diff;
       left: $diff;
       border-radius: 50%;
