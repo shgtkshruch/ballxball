@@ -36,10 +36,12 @@
       z-index: -1;
       transition: background-color .3s;
     }
-    &:hover {
-      background-color: $color-pink;
-      &::after {
-        background-color: $color-blue;
+    @media (min-width: $screen-sm) {
+      &:hover {
+        background-color: $color-pink;
+        &::after {
+          background-color: $color-blue;
+        }
       }
     }
   }
