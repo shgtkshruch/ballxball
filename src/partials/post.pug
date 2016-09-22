@@ -71,3 +71,12 @@ article.post
         | というコマンドを打ちます。そうすると、dockerがWebサーバーとデータベースのコンテナを立ち上げてくれます。あとは
         code http://localhost:8000
         | にアクセスすると、いつものWordPressのインストール画面になるので、初期設定をすませるだけです。
+
+    h3.post__snsTitle
+      span.post__titleInner Share
+    ul.post__sns.sns
+      each sns, i in ['twitter', 'facebook', 'google-plus', 'hatena', 'get-pocket']
+        li.sns__item
+          a(href="#")
+            i.sns__icon(class=`fa fa-${sns}`)
+            span.sns__text= sns

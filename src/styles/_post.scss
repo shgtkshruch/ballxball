@@ -28,6 +28,7 @@
   }
   &__body {
     font-size: $font-size;
+    margin-bottom: $margin;
     h3 {
       padding-left: 1.6rem;
       margin: 4rem 0 2rem;
@@ -35,7 +36,7 @@
       font-size: 2rem;
     }
     p {
-      margin: 2rem 0;
+      margin-top: 2rem;
     }
     a {
       color: $color-pink;
@@ -43,10 +44,40 @@
         text-decoration: underline;
       }
     }
+    pre {
+      margin-top: 2rem;
+    }
     code:not(.hljs) {
       padding: 0 .2em;
       background-color: #f3f3f3;
       border-radius: 3px;;
     }
+  }
+  &__sns {
+    margin-top: 3rem;
+    @media (min-width: $screen-sm) {
+      padding-bottom: 3rem;
+      border-bottom: 1px solid $color-blue;
+    }
+  }
+  &__snsTitle {
+    position: relative;
+    font-size: 2.2rem;
+    font-weight: normal;
+    text-align: center;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-blue;
+      z-index: -1;
+    }
+  }
+  &__titleInner {
+    padding: 0 2rem;
+    background-color: #fff;
   }
 }

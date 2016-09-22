@@ -1,12 +1,14 @@
 .sns {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   &__text {
     display: none;
   }
   &__item {
-    &:not(:last-child) {
-      margin-right: 3rem;
-    }
+    margin-right: 1.5rem;
+    margin-bottom: 3rem;
+    margin-left: 1.5rem;
   }
   &__icon {
     position: relative;
