@@ -11,12 +11,31 @@
     color: $color-blue;
     border: 1px solid;
     border-radius: 3px;
+    background-color: #fff;
     font-size: 1.2rem;
     letter-spacing: .1rem;
     transition: all .2s;
-    &:hover {
-      color: #fff;
-      background-color: $color-pink;
+    @media (min-width: $screen-sm) {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-blue;
+        border-radius: 3px;
+        z-index: -1;
+        transition: transform .3s;
+      }
+      &:hover {
+        color: #fff;
+        background-color: $color-pink;
+        border: none;
+        &:before {
+          transform: rotate(10deg);
+        }
+      }
     }
   }
 }
