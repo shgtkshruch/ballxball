@@ -1,0 +1,18 @@
+extends partials/layout
+
+block body
+  body.page
+    include partials/header
+
+    .l-container
+      main.l-main
+        article.page__content
+          h2 About
+          p ballxballはWeb制作に関する記事を備忘録として書いているブログです。
+          h3 Google Analyticsについて
+          p
+            | 当サイトでは訪問者の情報を Google Analytics を使って収集しています。詳しくは
+            a(href="https://www.google.com/intl/ja/policies/privacy/partners/") ユーザーが Google パートナーのサイトやアプリを使用する際の Google によるデータ使用
+            | を御覧ください。
+
+    include partials/footer

@@ -6,36 +6,37 @@ block body
 
     .l-container
       main.l-main
-        h2 Contact
-        p ご意見・ご感想・ご指摘・お問い合わせなどありましたら、こちらのフォームよりご連絡ください。
-        p できる限り早急に返信はしますが、都合により遅くなってしまう場合や内容によってはご返答しない場合もありますので、予めご了承ください。
-        #wpcf7-f16-p18-o1.wpcf7(role='form', lang='ja', dir='ltr')
-          .screen-reader-response
-            form.wpcf7-form(action='/contact/#wpcf7-f16-p18-o1', method='post', novalidate='novalidate')
-              div(style='display: none;')
-                input(type='hidden', name='_wpcf7', value='16')
-              p
-                label
-                  | Name
-                  span *
-                  br
-                span.wpcf7-form-control-wrap.your-name
-                  input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required(type='text', name='your-name', value='', size='40', aria-required='true', aria-invalid='false')
-              p
-                label
-                  | Email
-                  span *
-                  br
-                span.wpcf7-form-control-wrap.your-email
-                  input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email(type='email', name='your-email', value='', size='40', aria-required='true', aria-invalid='false')
-              p
-                label
-                  | Message
-                  span *
-                  br
-                span.wpcf7-form-control-wrap.your-message
-                  textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required(name='your-message', cols='40', rows='10', aria-required='true', aria-invalid='false')
-              p
-                input.wpcf7-form-control.wpcf7-submit(type='submit', value='Send')
+        article.page__content
+          h2 Contact
+          p ご意見・ご感想・ご指摘・お問い合わせなどありましたら、こちらのフォームよりご連絡ください。
+          p できる限り早急に返信はしますが、都合により遅くなってしまう場合や内容によってはご返答しない場合もありますので、予めご了承ください。
+          #wpcf7-f16-p18-o1.wpcf7(role='form', lang='ja', dir='ltr')
+            .screen-reader-response
+              form.wpcf7-form(action='/contact/#wpcf7-f16-p18-o1', method='post', novalidate='novalidate')
+                div(style='display: none;')
+                  input(type='hidden', name='_wpcf7', value='16')
+                p
+                  label
+                    | Name
+                    span *
+                    br
+                  span.wpcf7-form-control-wrap.your-name
+                    input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required(type='text', name='your-name', value='', size='40', aria-required='true', aria-invalid='false')
+                p
+                  label
+                    | Email
+                    span *
+                    br
+                  span.wpcf7-form-control-wrap.your-email
+                    input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email(type='email', name='your-email', value='', size='40', aria-required='true', aria-invalid='false')
+                p
+                  label
+                    | Message
+                    span *
+                    br
+                  span.wpcf7-form-control-wrap.your-message
+                    textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required(name='your-message', cols='40', rows='10', aria-required='true', aria-invalid='false')
+                p
+                  input.wpcf7-form-control.wpcf7-submit(type='submit', value='Send')
 
     include partials/footer

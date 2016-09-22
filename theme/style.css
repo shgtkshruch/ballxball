@@ -823,27 +823,42 @@ body:not(.opening) .logo__svg {
   background-color: #ff1a84;
 }
 
-.page {
+.page__content {
   font-size: 1.6rem;
 }
 
-.page h2 {
+.page__content h2 {
   position: relative;
-  margin: 0 0 5rem;
+  margin: 0 0 10rem;
   text-align: center;
   font-size: 4rem;
   line-height: 1;
 }
 
-.page h2::after {
+.page__content h2::after {
   position: absolute;
-  bottom: -2.5rem;
+  bottom: -5rem;
   left: 50%;
   width: 100px;
   height: 1px;
   margin-left: -50px;
   content: '';
   background-color: #0f2c70;
+}
+
+.page__content h3 {
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.page__content a {
+  padding: 0 .5rem;
+  color: #ff1a84;
+}
+
+.page__content a:hover {
+  text-decoration: underline;
 }
 
 .wpcf7 {
