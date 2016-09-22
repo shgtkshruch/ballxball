@@ -37,6 +37,10 @@ ol {
   padding-left: 2rem;
 }
 
+.l-main {
+  margin-bottom: 10rem;
+}
+
 .l-footer {
   padding: 0 2rem;
 }
@@ -741,6 +745,7 @@ body:not(.opening) .logo__svg {
 
   .l-main {
     width: 87rem;
+    margin-bottom: 0;
   }
 
   .l-aside {

@@ -14,8 +14,10 @@
   &-header {
   }
   &-main {
+    margin-bottom: $margin * 2;
     @media (min-width: $screen-sm) {
       width: $width-main;
+      margin-bottom: 0;
     }
   }
   &-aside {
