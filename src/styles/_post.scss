@@ -37,16 +37,47 @@
     border-bottom: 4px double $color-blue;
   }
   &__body {
+    $margin-post: 3rem;
     font-size: $font-size;
     margin-bottom: $margin;
+    counter-reset: h3;
     h3 {
-      padding-left: 1.6rem;
-      margin: 4rem 0 2rem;
-      border-left: 5px solid $color-blue;
+      $size: 5rem;
+      position: relative;
+      margin: $margin-post * 2 + $size 0 $margin-post;
+      text-align: center;
       font-size: 2rem;
+      &::before,
+      &::after {
+        position: absolute;
+        transform: translateX(-50%);
+        color: #fff;
+        width: $size;
+        height: $size;
+        line-height: $size;
+        border-radius: 50%;
+      }
+      &::before {
+        counter-increment: h3;
+        content: counter(h3, decimal-leading-zero);
+        top: ($size + $margin-post / 2) * -1;
+        left: 50%;
+        background-color: $color-blue;
+        font-size: .8em;
+        font-weight: normal;
+        letter-spacing: .1rem;
+      }
+      &::after {
+        $diff: 3px;
+        content: '';
+        top: calc((#{$size} + #{$margin-post} / 2) * -1 + #{$diff});
+        left: calc(50% + #{$diff});
+        background-color: $color-pink;
+        z-index: -1;
+      }
     }
     p {
-      margin-top: 2rem;
+      margin-top: $margin-post;
     }
     a {
       color: $color-pink;
@@ -55,7 +86,7 @@
       }
     }
     pre {
-      margin-top: 2rem;
+      margin-top: $margin-post;
     }
     code:not(.hljs) {
       padding: 0 .2em;
