@@ -457,6 +457,23 @@ body:not(.opening) .logo__svg {
   margin-bottom: 0;
 }
 
+.post__body p:first-of-type {
+  position: relative;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.post__body p:first-of-type::after {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  content: '';
+  border-top: 30px solid #eee;
+  border-right: 30px solid transparent;
+  border-left: 30px solid transparent;
+}
+
 .post__body h3 {
   position: relative;
   margin: 12.5rem 0 3rem;
