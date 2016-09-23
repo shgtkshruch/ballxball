@@ -1,27 +1,48 @@
 article.post
-  ul.post__tag.tagCloud
-    li.tagCloud__item
-      a.tagCloud__link(href="#") Docker
-    li.tagCloud__item
-      a.tagCloud__link(href="#") WordPress
-    li.tagCloud__item
-      a.tagCloud__link(href="#") Google Analytics
   header.post__header
     time.post__datetime 2016-09-15
     span.date.post__date
       | Sep 15
       br.hidden-sm
       span.date__year 2016
-    h2.post__title
-      | WordPressの開発環境を
-      br
-      | Dockerを使って一瞬で立ち上げる
+    ul.post__tag.tagCloud
+      li.tagCloud__item
+        a.tagCloud__link(href="#") Docker
+      li.tagCloud__item
+        a.tagCloud__link(href="#") WordPress
+      li.tagCloud__item
+        a.tagCloud__link(href="#") Google Analytics
+  h2.post__title WordPressの開発環境をDockerを使って一瞬で立ち上げる
   div.post__body
     p WordPressの勉強をするときにまず最初にしなければならないのが、開発環境の構築。LAMPやVagrantなどを使った方法もありますが、今回はDockerを使った開発環境の構築のやり方を紹介します。
     h3 Dockerとは？
     p
       a(href="https://www.docker.com/") Docker
       | とはDocke社が開発したコンテナを使ったアプリケーション開発を支援するツールです。アプリケーションをコンテナという単位で管理することで、パフォーマンスやメンテナンス性にすぐれた開発環境を構築することができます。
+
+    h3 Dockerのインストール
+    p
+      | DockerはDocker社の公式HPからダウンロードできます。
+      a(href="https://www.docker.com/products/docker") ダウンロードページ
+      | にMac、Windows、Linux用のDockerが用意されているので、ご自分の環境に合ったDockerをダウンロードしてください。
+
+    p
+      | ちなみに、MacならHomebrewを使って以下のコマンドでインストールできます。
+    pre.language-shell
+      code
+        .
+          $ brew install docker
+
+    p
+      | インストールできたらコマンドラインで以下のコマンドを打ってみてください。
+    pre.language-shell
+      code
+        .
+          $ docker --version
+          Docker version 1.12.1-rc1, build 7889dc7, experimental
+
+    p
+      | このコマンドを打って、上記のようにDockerのバージョン情報がでてくればインストール完了です。
 
     h3 docker-composeの設定
     p Dockerでは
