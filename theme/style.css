@@ -37,6 +37,11 @@ ol {
   padding-left: 2rem;
 }
 
+.l-main:only-child {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
 .header {
   margin: 2.5rem 0;
 }
