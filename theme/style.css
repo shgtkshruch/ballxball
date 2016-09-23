@@ -32,7 +32,7 @@ ol {
 }
 
 .l-container {
-  max-width: 120rem;
+  max-width: 124rem;
   padding-right: 2rem;
   padding-left: 2rem;
 }
@@ -200,7 +200,7 @@ body:not(.opening) .logo__svg {
 }
 
 .guide {
-  max-width: 120rem;
+  max-width: 124rem;
   margin: 5rem 0;
   padding: 0 2rem;
 }
@@ -1073,7 +1073,7 @@ body:not(.opening) .logo__svg {
   }
 
   .l-footer {
-    max-width: 120rem;
+    max-width: 124rem;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1086,7 +1086,7 @@ body:not(.opening) .logo__svg {
   body:not(.opening) .header,
   .header--animationEnd {
     display: block;
-    max-width: 120rem;
+    max-width: 124rem;
     margin-right: auto;
     margin-left: auto;
     padding: 0 3rem;
