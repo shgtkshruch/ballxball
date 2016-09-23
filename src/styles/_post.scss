@@ -44,7 +44,8 @@
     line-height: 1.4;
     text-align: center;
     @media (min-width: $screen-sm) {
-      padding-left: $size-article-date;
+      padding-left: $size-article-date + .5rem;
+      padding-right: .5rem;
     }
   }
   &__body {

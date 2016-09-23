@@ -32,7 +32,7 @@ ol {
 }
 
 .l-container {
-  max-width: 127rem;
+  max-width: 120rem;
   padding-right: 2rem;
   padding-left: 2rem;
 }
@@ -200,7 +200,7 @@ body:not(.opening) .logo__svg {
 }
 
 .guide {
-  max-width: 127rem;
+  max-width: 120rem;
   margin: 5rem 0;
   padding: 0 2rem;
 }
@@ -1017,7 +1017,7 @@ body:not(.opening) .logo__svg {
   }
 
   .l-main {
-    width: 87rem;
+    width: 80rem;
   }
 
   .l-aside {
@@ -1028,7 +1028,7 @@ body:not(.opening) .logo__svg {
   }
 
   .l-footer {
-    max-width: 127rem;
+    max-width: 120rem;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1041,7 +1041,7 @@ body:not(.opening) .logo__svg {
   body:not(.opening) .header,
   .header--animationEnd {
     display: block;
-    max-width: 127rem;
+    max-width: 120rem;
     margin-right: auto;
     margin-left: auto;
     padding: 0 3rem;
@@ -1188,7 +1188,8 @@ body:not(.opening) .logo__svg {
   }
 
   .post__title {
-    padding-left: 10rem;
+    padding-right: .5rem;
+    padding-left: 10.5rem;
   }
 
   .post__sns {
