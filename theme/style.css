@@ -380,35 +380,39 @@ body:not(.opening) .logo__svg {
 }
 
 .post {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: start;
-  -webkit-box-align: start;
-  align-items: flex-start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.post__header {
-  margin-bottom: 2rem;
-}
-
-.post__date {
-  display: none;
+  position: relative;
+  margin-top: 10rem;
 }
 
 .post__tag {
-  margin-top: 2.5rem;
+  -ms-flex-pack: center;
+  margin-right: -.5rem;
+  font-size: 1rem !important;
+  -webkit-box-pack: center;
+  justify-content: center;
 }
 
-.post__main {
-  max-width: 100%;
+.post__header {
+  margin-bottom: 5rem;
+}
+
+.post__datetime {
+  display: none;
+}
+
+.post__date {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 2rem;
+  margin-left: -45px;
 }
 
 .post__title {
-  margin: 0 0 3rem;
-  padding: 1.66667rem 0;
+  margin: 0;
+  padding-top: 1.66667rem;
+  padding-bottom: 1.66667rem;
+  text-align: center;
   border-top: 4px double #0f2c70;
   border-bottom: 4px double #0f2c70;
   font-size: 2.4rem;
@@ -783,6 +787,10 @@ body:not(.opening) .logo__svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
+  letter-spacing: .1rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -795,13 +803,10 @@ body:not(.opening) .logo__svg {
   position: relative;
   display: inline-block;
   padding: 1rem;
-  letter-spacing: .1rem;
   color: #0f2c70;
   border: 1px solid;
   border-radius: 3px;
   background-color: #fff;
-  font-size: 1.2rem;
-  line-height: 1.4;
 }
 
 .sns {
@@ -1161,14 +1166,29 @@ body:not(.opening) .logo__svg {
     content: '';
   }
 
-  .post__header {
-    width: 10rem;
-    margin-right: 2rem;
-    text-align: center;
+  .post {
+    margin-top: 0;
   }
 
-  .post__main {
-    width: calc(100% - 10rem - 2rem);
+  .post__tag {
+    -ms-flex-pack: end;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+  }
+
+  .post__header {
+    position: relative;
+  }
+
+  .post__date {
+    top: 50%;
+    left: 5rem;
+    margin-top: -5rem;
+    margin-left: -5rem;
+  }
+
+  .post__title {
+    padding-left: 10rem;
   }
 
   .post__sns {
@@ -1354,14 +1374,6 @@ body:not(.opening) .logo__svg {
   }
 
   .article__main {
-    width: calc(100% - 10rem - 5rem);
-  }
-
-  .post__header {
-    margin-right: 5rem;
-  }
-
-  .post__main {
     width: calc(100% - 10rem - 5rem);
   }
 

@@ -1,84 +1,83 @@
 article.post
+  ul.post__tag.tagCloud
+    li.tagCloud__item
+      a.tagCloud__link(href="#") Docker
+    li.tagCloud__item
+      a.tagCloud__link(href="#") WordPress
+    li.tagCloud__item
+      a.tagCloud__link(href="#") Google Analytics
   header.post__header
-    time.post__date 2016-09-15
-    span.date
+    time.post__datetime 2016-09-15
+    span.date.post__date
       | Sep 15
       br.hidden-sm
       span.date__year 2016
-    ul.post__tag.tagCloud
-      li.tagCloud__item
-        a.tagCloud__link(href="#") Docker
-      li.tagCloud__item
-        a.tagCloud__link(href="#") WordPress
-      li.tagCloud__item
-        a.tagCloud__link(href="#") Google Analytics
-  .post__main
     h2.post__title WordPressの開発環境をDockerを使って一瞬で立ち上げる
-    div.post__body
-      p WordPressの勉強をするときにまず最初にしなければならないのが、開発環境の構築。LAMPやVagrantなどを使った方法もありますが、今回はDockerを使った開発環境の構築のやり方を紹介します。
-      h3 Dockerとは？
-      p
-        a(href="https://www.docker.com/") Docker
-        | とはDocke社が開発したコンテナを使ったアプリケーション開発を支援するツールです。アプリケーションをコンテナという単位で管理することで、パフォーマンスやメンテナンス性にすぐれた開発環境を構築することができます。
+  div.post__body
+    p WordPressの勉強をするときにまず最初にしなければならないのが、開発環境の構築。LAMPやVagrantなどを使った方法もありますが、今回はDockerを使った開発環境の構築のやり方を紹介します。
+    h3 Dockerとは？
+    p
+      a(href="https://www.docker.com/") Docker
+      | とはDocke社が開発したコンテナを使ったアプリケーション開発を支援するツールです。アプリケーションをコンテナという単位で管理することで、パフォーマンスやメンテナンス性にすぐれた開発環境を構築することができます。
 
-      h3 docker-composeの設定
-      p Dockerでは
-        code docker
-        | コマンドでコンテナを立ち上げることができますが、WordPressのようにWebサーバーとデータベースを連動させるようなアプリケーションの場合には、Webサーバー・データベースそれぞれのコンテナを別々に立ち上げる方がいいとされています。
-        code doker
-        | コマンドで２つのコンテナを立ち上げてもいいですが、少し面倒です。そんなときに便利なのが、
-        code docker-compose
-        | というコマンドです。
-        code docker-compose
-        | コマンドを使うには、まず複数のコンテナの設定を書いた
-        code docker-compose.yml
-        | というファイルを用意します。
-      pre
-        code.language-yaml
-          .
-            # docker-compose.yml
+    h3 docker-composeの設定
+    p Dockerでは
+      code docker
+      | コマンドでコンテナを立ち上げることができますが、WordPressのようにWebサーバーとデータベースを連動させるようなアプリケーションの場合には、Webサーバー・データベースそれぞれのコンテナを別々に立ち上げる方がいいとされています。
+      code doker
+      | コマンドで２つのコンテナを立ち上げてもいいですが、少し面倒です。そんなときに便利なのが、
+      code docker-compose
+      | というコマンドです。
+      code docker-compose
+      | コマンドを使うには、まず複数のコンテナの設定を書いた
+      code docker-compose.yml
+      | というファイルを用意します。
+    pre
+      code.language-yaml
+        .
+          # docker-compose.yml
 
-            version: '2'
-            services:
-              db:
-                image: mysql:latest
-                volumes:
-                  - "./.data/db:/var/lib/mysql"
-                restart: always
-                environment:
-                  MYSQL_ROOT_PASSWORD: wordpress
-                  MYSQL_DATABASE: wordpress
-                  MYSQL_USER: wordpress
-                  MYSQL_PASSWORD: wordpress
+          version: '2'
+          services:
+            db:
+              image: mysql:latest
+              volumes:
+                - "./.data/db:/var/lib/mysql"
+              restart: always
+              environment:
+                MYSQL_ROOT_PASSWORD: wordpress
+                MYSQL_DATABASE: wordpress
+                MYSQL_USER: wordpress
+                MYSQL_PASSWORD: wordpress
 
-              wordpress:
-                depends_on:
-                  - db
-                image: wordpress:latest
-                links:
-                  - db
-                ports:
-                  - "8000:80"
-                volumes:
-                  - "./theme:/var/www/html/wp-content/themes/ballxball"
-                restart: always
-                environment:
-                  WORDPRESS_DB_HOST: db:3306
-                  WORDPRESS_DB_PASSWORD: wordpress
-      p
-        | ファイルを用意できたら、
-        code docker-comse.yml
-        | がある階層で、
-        code docker-compose up -d
-        | というコマンドを打ちます。そうすると、dockerがWebサーバーとデータベースのコンテナを立ち上げてくれます。あとは
-        code http://localhost:8000
-        | にアクセスすると、いつものWordPressのインストール画面になるので、初期設定をすませるだけです。
+            wordpress:
+              depends_on:
+                - db
+              image: wordpress:latest
+              links:
+                - db
+              ports:
+                - "8000:80"
+              volumes:
+                - "./theme:/var/www/html/wp-content/themes/ballxball"
+              restart: always
+              environment:
+                WORDPRESS_DB_HOST: db:3306
+                WORDPRESS_DB_PASSWORD: wordpress
+    p
+      | ファイルを用意できたら、
+      code docker-comse.yml
+      | がある階層で、
+      code docker-compose up -d
+      | というコマンドを打ちます。そうすると、dockerがWebサーバーとデータベースのコンテナを立ち上げてくれます。あとは
+      code http://localhost:8000
+      | にアクセスすると、いつものWordPressのインストール画面になるので、初期設定をすませるだけです。
 
-    h3.post__snsTitle
-      span.post__titleInner Share
-    ul.post__sns.sns
-      each sns, i in ['twitter', 'facebook', 'google-plus', 'hatena', 'get-pocket']
-        li.sns__item
-          a(href="#")
-            i.sns__icon(class=`fa fa-${sns}`)
-            span.sns__text= sns
+  h3.post__snsTitle
+    span.post__titleInner Share
+  ul.post__sns.sns
+    each sns, i in ['twitter', 'facebook', 'google-plus', 'hatena', 'get-pocket']
+      li.sns__item
+        a(href="#")
+          i.sns__icon(class=`fa fa-${sns}`)
+          span.sns__text= sns

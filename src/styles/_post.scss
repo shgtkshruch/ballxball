@@ -1,46 +1,61 @@
 .post {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  &__header {
-    margin-bottom: 2rem;
-    @media (min-width: $screen-sm) {
-      width: $size-article-date;
-      margin-right: $padding-page;
-      text-align: center;
-    }
-    @media (min-width: $screen-md) {
-      margin-right: $margin;
-    }
-  }
-  &__date {
-    display: none;
+  position: relative;
+  margin-top: $size-article-date;
+  @media (min-width: $screen-sm) {
+    margin-top: 0;
   }
   &__tag {
-    margin-top: $margin / 2;
-  }
-  &__main {
-    max-width: 100%;
+    justify-content: center;
+    margin-right: -.5rem;
+    font-size: 1rem !important;
     @media (min-width: $screen-sm) {
-      width: calc(100% - #{$size-article-date} - #{$padding-page});
+      justify-content: flex-end;
     }
-    @media (min-width: $screen-md) {
-      width: calc(100% - #{$size-article-date} - #{$margin});
+  }
+  &__header {
+    margin-bottom: 5rem;
+    @media (min-width: $screen-sm) {
+      position: relative;
+    }
+  }
+  &__datetime {
+    display: none;
+  }
+  &__date {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 2rem;
+    margin-left: -45px;
+    @media (min-width: $screen-sm) {
+      top: 50%;
+      left: $size-article-date / 2;
+      margin-top: $size-article-date / 2 * -1;
+      margin-left: $size-article-date / 2 * -1;
     }
   }
   &__title {
-    margin: 0 0 3rem;
-    font-size: $font-size-heading;
-    line-height: 1.4;
-    padding: $margin / 3 0;
+    margin: 0;
+    padding-top: $margin / 3;
+    padding-bottom: $margin / 3;
     border-top: 4px double $color-blue;
     border-bottom: 4px double $color-blue;
+    font-size: $font-size-heading;
+    line-height: 1.4;
+    text-align: center;
+    @media (min-width: $screen-sm) {
+      padding-left: $size-article-date;
+    }
   }
   &__body {
     $margin-post: 3rem;
     font-size: $font-size;
     margin-bottom: $margin;
     counter-reset: h3;
+    @media (min-width: $screen-sm) {
+      // width: $font-size * 45;
+      // margin: 0 auto;
+    }
     > *:last-of-type:not(h3) {
       margin-bottom: 0;
     }
