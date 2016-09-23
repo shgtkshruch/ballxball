@@ -518,11 +518,20 @@ body:not(.opening) .logo__svg {
 }
 
 .post__body a {
+  position: relative;
   color: #ff1a84;
 }
 
-.post__body a:hover {
-  text-decoration: underline;
+.post__body a::after {
+  position: absolute;
+  bottom: -.5rem;
+  left: 0;
+  width: 0;
+  height: 1px;
+  content: '';
+  -webkit-transition: width .2s;
+  transition: width .2s;
+  background-color: #ff1a84;
 }
 
 .post__body pre {
@@ -1220,6 +1229,10 @@ body:not(.opening) .logo__svg {
     -ms-flex-pack: end;
     -webkit-box-pack: end;
     justify-content: flex-end;
+  }
+
+  .post__body a:hover::after {
+    width: 100%;
   }
 
   .post__sns {

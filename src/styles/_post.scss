@@ -116,9 +116,22 @@
       margin: $margin-post 0;
     }
     a {
+      position: relative;
       color: $color-pink;
-      &:hover {
-        text-decoration: underline;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -.5rem;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $color-pink;
+        transition: width .2s;
+      }
+      @media (min-width: $screen-sm) {
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
     pre {
