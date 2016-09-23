@@ -47,7 +47,7 @@ ol {
 }
 
 .header {
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 5rem;
 }
 
 body:not(.opening) .header {
@@ -1030,7 +1030,7 @@ body:not(.opening) .logo__svg {
   }
 
   .header {
-    padding: 0;
+    margin: 5rem 0 10rem;
     text-align: center;
   }
 
@@ -1040,7 +1040,7 @@ body:not(.opening) .logo__svg {
     max-width: 127rem;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 
   .header__hamburger {
@@ -1048,12 +1048,11 @@ body:not(.opening) .logo__svg {
   }
 
   .logo {
-    margin: 5rem 0;
+    margin-bottom: 5rem;
   }
 
   .gnav {
     display: block;
-    margin: 5rem 0 10rem;
   }
 
   .gnav__container {

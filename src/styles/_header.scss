@@ -1,5 +1,5 @@
 .header {
-  margin: $margin / 2 0;
+  margin: $margin / 2 0 $margin;
   body:not(.opening) & {
     display: flex;
     justify-content: flex-start;
@@ -7,14 +7,14 @@
   }
   @media (min-width: $screen-sm) {
     text-align: center;
-    padding: 0;
+    margin: $margin 0 $margin * 2;
     body:not(.opening) &,
     &--animationEnd {
       display: block;
-      padding: 0 $padding-page;
       max-width: $width-container;
       margin-right: auto;
       margin-left: auto;
+      padding: 0 $padding-page + 1rem;
     }
   }
   &__hamburger {

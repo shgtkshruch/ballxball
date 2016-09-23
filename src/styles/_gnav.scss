@@ -2,7 +2,6 @@
   display: none;
   @media (min-width: $screen-sm) {
     display: block;
-    margin: $margin 0 $margin * 2;
   }
   &--slideUp {
     opacity: 1 !important;

@@ -3,7 +3,7 @@
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   @media (min-width: $screen-sm) {
-    margin: $margin 0;
+    margin-bottom: $margin;
   }
   &__link {
     pointer-events: none;
