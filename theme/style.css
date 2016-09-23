@@ -967,8 +967,7 @@ body:not(.opening) .logo__svg {
 
 .error__heading {
   margin: 0 0 5rem;
-  color: #fff;
-  text-shadow: 1px 1px 1px #0f2c70, -1px -1px 1px #ff1a84;
+  color: #fcfcfc;
   font-size: 30vw;
   line-height: 1;
 }
