@@ -7,12 +7,13 @@
   &__link {
     position: relative;
     display: inline-block;
-    padding: .5rem 1rem;
+    padding: 1rem;
     color: $color-blue;
     border: 1px solid;
     border-radius: 3px;
     background-color: #fff;
     font-size: 1.2rem;
+    line-height: 1.4;
     letter-spacing: .1rem;
     @media (min-width: $screen-sm) {
       transition: all .3s;

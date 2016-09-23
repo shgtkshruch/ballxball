@@ -790,13 +790,14 @@ body:not(.opening) .logo__svg {
 .tagCloud__link {
   position: relative;
   display: inline-block;
-  padding: .5rem 1rem;
+  padding: 1rem;
   letter-spacing: .1rem;
   color: #0f2c70;
   border: 1px solid;
   border-radius: 3px;
   background-color: #fff;
   font-size: 1.2rem;
+  line-height: 1.4;
 }
 
 .sns {
