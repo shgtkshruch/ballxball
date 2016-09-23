@@ -53,17 +53,13 @@
     font-size: $font-size;
     margin-bottom: $margin;
     counter-reset: h3;
-    @media (min-width: $screen-sm) {
-      // width: $font-size * 45;
-      // margin: 0 auto;
-    }
     > *:last-of-type:not(h3) {
       margin-bottom: 0;
     }
     h3 {
       $size: 5rem;
       position: relative;
-      margin: $margin-post * 2 + $size 0 $margin-post;
+      margin: $margin-post * 2.5 + $size 0 $margin-post;
       text-align: center;
       font-size: 2rem;
       &::before,
