@@ -389,6 +389,7 @@ body:not(.opening) .logo__svg {
 .post__tag {
   -ms-flex-pack: center;
   margin-right: -.5rem;
+  margin-bottom: 1rem;
   -webkit-box-pack: center;
   justify-content: center;
 }
@@ -412,7 +413,7 @@ body:not(.opening) .logo__svg {
 }
 
 .post__date {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .post__date.date {
@@ -438,7 +439,7 @@ body:not(.opening) .logo__svg {
 }
 
 .post__title {
-  margin: 0;
+  margin: 0 0 3rem;
   padding-top: 1.66667rem;
   padding-bottom: 1.66667rem;
   text-align: center;
@@ -460,6 +461,7 @@ body:not(.opening) .logo__svg {
 
 .post__body p:first-of-type {
   position: relative;
+  margin: 5rem 0;
   padding: 2rem;
   border-radius: 5px;
   background-color: #eee;
@@ -477,7 +479,7 @@ body:not(.opening) .logo__svg {
 
 .post__body h3 {
   position: relative;
-  margin: 12.5rem 0 3rem;
+  margin: 15.5rem 0 3rem;
   text-align: center;
   font-size: 2rem;
 }
@@ -519,6 +521,7 @@ body:not(.opening) .logo__svg {
 
 .post__body a {
   position: relative;
+  white-space: nowrap;
   color: #ff1a84;
 }
 
