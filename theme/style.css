@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -5,6 +7,7 @@ html {
 
 body {
   color: #333;
+  font-family: YuGothic,'Yu Gothic',游ゴシック体,游ゴシック,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Roboto,メイリオ,Meiryo,'ＭＳ Ｐゴシック',Osaka,'MS PGothic',Arial,Helvetica,Verdana,sans-serif;
   line-height: 2;
 }
 
@@ -354,7 +357,6 @@ body:not(.opening) .logo__svg {
   color: #fff;
   border-radius: 3px;
   background-color: #0f2c70;
-  font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
 }
@@ -387,7 +389,6 @@ body:not(.opening) .logo__svg {
 .post__tag {
   -ms-flex-pack: center;
   margin-right: -.5rem;
-  font-size: 1rem !important;
   -webkit-box-pack: center;
   justify-content: center;
 }
