@@ -539,9 +539,10 @@ body:not(.opening) .logo__svg {
 }
 
 .post__body code:not(.hljs) {
-  padding: 0 .2em;
+  padding: 0 .7rem;
   border-radius: 3px;
-  background-color: #f3f3f3;
+  background-color: #f5f2f0;
+  text-shadow: 0 1px #fff;
 }
 
 .post__sns {

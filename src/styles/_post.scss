@@ -138,9 +138,10 @@
       margin: $margin-post 0;
     }
     code:not(.hljs) {
-      padding: 0 .2em;
-      background-color: #f3f3f3;
+      padding: 0 .7rem;
+      background-color: $color-codebg;
       border-radius: 3px;;
+      text-shadow: 0 1px #fff;
     }
   }
   &__sns {
