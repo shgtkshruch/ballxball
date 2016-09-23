@@ -1,0 +1,32 @@
+.error {
+  font-size: $font-size;
+  text-align: center;
+  &__heading {
+    margin: 0 0 5rem;
+    font-size: 30vw;
+    line-height: 1;
+    color: #fff;
+    text-shadow:
+      1px 1px 1px $color-blue,
+      -1px -1px 1px $color-pink;
+    @media (min-width: $screen-md) {
+      font-size: 35rem
+    }
+  }
+  &__text {
+    margin-bottom: 3rem;
+  }
+  &__link {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: $color-blue;
+    color: #fff;
+    border-radius: 35px;
+    @media (min-width: $screen-sm) {
+      transition: background-color .3s;
+      &:hover {
+        background-color: $color-pink;
+      }
+    }
+  }
+}

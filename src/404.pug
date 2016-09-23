@@ -1,0 +1,13 @@
+extends partials/layout
+
+block body
+  body
+    include partials/header
+
+    .l-container
+      main.l-main.error
+        h1.error__heading 404
+        p.error__text お探しのページは見つかりませんでした。
+        a.error__link(href="/") ホームに戻る
+
+    include partials/footer

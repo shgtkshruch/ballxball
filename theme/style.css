@@ -42,6 +42,10 @@ ol {
   margin: 0 auto;
 }
 
+.l-main.error {
+  max-width: 100%;
+}
+
 .header {
   margin: 2.5rem 0;
 }
@@ -956,6 +960,31 @@ body:not(.opening) .logo__svg {
   background-color: #ff1a84;
 }
 
+.error {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.error__heading {
+  margin: 0 0 5rem;
+  color: #fff;
+  text-shadow: 1px 1px 1px #0f2c70, -1px -1px 1px #ff1a84;
+  font-size: 30vw;
+  line-height: 1;
+}
+
+.error__text {
+  margin-bottom: 3rem;
+}
+
+.error__link {
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: #fff;
+  border-radius: 35px;
+  background-color: #0f2c70;
+}
+
 .opening {
   overflow-y: hidden;
   height: 100vh;
@@ -1302,6 +1331,15 @@ body:not(.opening) .logo__svg {
     background-color: #0f2c70;
   }
 
+  .error__link {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+  }
+
+  .error__link:hover {
+    background-color: #ff1a84;
+  }
+
   .hidden-sm {
     display: block;
   }
@@ -1327,5 +1365,9 @@ body:not(.opening) .logo__svg {
 
   .post__main {
     width: calc(100% - 10rem - 5rem);
+  }
+
+  .error__heading {
+    font-size: 35rem;
   }
 }
