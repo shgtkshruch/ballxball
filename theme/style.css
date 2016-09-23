@@ -939,18 +939,32 @@ body:not(.opening) .logo__svg {
 }
 
 .page__content h3 {
-  margin: 2rem 0;
+  margin: 5rem 0 3rem;
   font-size: 2.5rem;
   font-weight: normal;
 }
 
+.page__content p {
+  margin: 3rem 0;
+}
+
 .page__content a {
+  position: relative;
   padding: 0 .5rem;
+  white-space: nowrap;
   color: #ff1a84;
 }
 
-.page__content a:hover {
-  text-decoration: underline;
+.page__content a::after {
+  position: absolute;
+  bottom: -.5rem;
+  left: 0;
+  width: 0;
+  height: 1px;
+  content: '';
+  -webkit-transition: width .3s;
+  transition: width .3s;
+  background-color: #ff1a84;
 }
 
 .wpcf7 {
@@ -1392,6 +1406,10 @@ body:not(.opening) .logo__svg {
 
   .sns__icon:hover::after {
     background-color: #0f2c70;
+  }
+
+  .page__content a:hover::after {
+    width: 100%;
   }
 
   .error__link {
