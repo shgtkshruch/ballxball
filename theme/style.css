@@ -918,27 +918,19 @@ body:not(.opening) .logo__svg {
   background-color: #ff1a84;
 }
 
-.page__content {
-  font-size: 1.6rem;
-}
-
-.page__content h2 {
+.page__title {
   position: relative;
   margin: 0 0 10rem;
+  padding: 2rem 0;
   text-align: center;
+  border-top: 4px double #0f2c70;
+  border-bottom: 4px double #0f2c70;
   font-size: 4rem;
   line-height: 1;
 }
 
-.page__content h2::after {
-  position: absolute;
-  bottom: -5rem;
-  left: 50%;
-  width: 100px;
-  height: 1px;
-  margin-left: -50px;
-  content: '';
-  background-color: #0f2c70;
+.page__content {
+  font-size: 1.6rem;
 }
 
 .page__content h3 {
