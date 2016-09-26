@@ -1,8 +1,6 @@
 .header {
   margin: $margin / 2 0 $margin;
   body:not(.opening) & {
-    display: flex;
-    justify-content: flex-start;
     padding: 0 $padding-page;
   }
   @media (min-width: $screen-sm) {
@@ -10,7 +8,6 @@
     margin: $margin 0 $margin * 2;
     body:not(.opening) &,
     &--animationEnd {
-      display: block;
       max-width: $width-container;
       margin-right: auto;
       margin-left: auto;
