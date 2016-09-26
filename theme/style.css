@@ -922,7 +922,7 @@ body:not(.opening) .logo__svg {
 
 .page__title {
   position: relative;
-  margin: 0 0 10rem;
+  margin: 0 0 5rem 0;
   padding: 2rem 0;
   text-align: center;
   border-top: 4px double #0f2c70;
@@ -948,7 +948,6 @@ body:not(.opening) .logo__svg {
 .page__content a {
   position: relative;
   padding: 0 .5rem;
-  white-space: nowrap;
   color: #ff1a84;
 }
 
@@ -1448,6 +1447,14 @@ body:not(.opening) .logo__svg {
 
   .sns__icon:hover::after {
     background-color: #0f2c70;
+  }
+
+  .page__title {
+    margin: 0 0 10rem;
+  }
+
+  .page__content a {
+    white-space: nowrap;
   }
 
   .page__content a:hover::after {
