@@ -540,7 +540,7 @@ body:not(.opening) .logo__svg {
   margin: 3rem 0;
 }
 
-.post__body code:not(.hljs) {
+.post__body code {
   padding: 0 .7rem;
   border-radius: 3px;
   background-color: #f5f2f0;
