@@ -1,7 +1,6 @@
 .article {
   $margin: 5rem;
   position: relative;
-  font-size: $font-size;
   &:first-child {
     .article__inner {
       padding-top: 0;

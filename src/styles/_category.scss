@@ -6,7 +6,6 @@
     display: block;
   }
   &__item {
-    font-size: $font-size;
     text-align: center;
     &:not(:last-child) {
       margin-right: 2rem;

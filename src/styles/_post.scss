@@ -56,7 +56,6 @@
   }
   &__body {
     $margin-post: 3rem;
-    font-size: $font-size;
     margin-bottom: $margin;
     counter-reset: h3;
     > *:last-of-type:not(h3) {
