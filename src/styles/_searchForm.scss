@@ -1,39 +1,66 @@
 .searchForm {
-  display: none;
-  height: 100%;
-  &:hover {
-    .searchForm__input {
-      color: $color-pink;
+  position: relative;
+  display: block;
+  height: 4rem;
+  font-size: 2rem;
+  line-height: 1;
+  @media (min-width: $screen-sm) {
+    display: none;
+    height: 100%;
+    &:hover {
+      .searchForm__input {
+        color: $color-pink;
+      }
     }
   }
   &__form {
-    display: flex;
     height: 100%;
+    text-align: left;
+    @media (min-width: $screen-sm) {
+      display: flex;
+    }
   }
   &__input {
     width: 80%;
     height: 100%;
+    border: 1px solid $color-blue;
+    border-radius: 3px 0 0 3px;
     color: $color-blue;
     font-size: 1.8rem;
     text-align: center;
     outline: none;
+    @media (min-width: $screen-sm) {
+      border: none;
+    }
   }
   &__btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     width: 20%;
-    color: #fff;
+    height: 4rem;
     cursor: pointer;
     outline: none;
+    color: #fff;
+    background-color: $color-blue;
+    border-radius: 0 3px 3px 0;
+    @media (min-width: $screen-sm) {
+      background-color: transparent;
+      border: none;
+    }
   }
   &__bg {
-    $border-width: 2px;
-    position: absolute;
-    top: 50%;
-    left: $border-width;
-    width: 80%;
-    height: calc(100% - #{$border-width} * 2);
-    transform: translateY(-50%) skew(-30deg);
-    background-color: #fff;
-    z-index: -1;
+    @media (min-width: $screen-sm) {
+      $border-width: 2px;
+      position: absolute;
+      top: 50%;
+      left: $border-width;
+      width: 80%;
+      height: calc(100% - #{$border-width} * 2);
+      transform: translateY(-50%) skew(-30deg);
+      background-color: #fff;
+      z-index: -1;
+    }
   }
 }
 

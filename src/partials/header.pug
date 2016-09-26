@@ -18,7 +18,7 @@ header.l-header.header
               span.searchForm__bg
               form.searchForm__form(action="search.html")
                 input.searchForm__input(type="search" name="s" placeholder="keywrods")
-                input.searchForm__btn(type="submit" value="検索")
+                button(type="submit").fa.fa-search.searchForm__btn
           else
             a.gnav__link(href=`${n.link}`)= n.text
 
